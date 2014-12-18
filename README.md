@@ -1,6 +1,5 @@
 ---
 title: README.md
-layout: NA
 ---
 
 abeatte.github.io
