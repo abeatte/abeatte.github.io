@@ -13,4 +13,3 @@ Then browse to https://localhost:4000
 
 To update bundle and/or jekyll start from terminal:
  'bundle update'
-

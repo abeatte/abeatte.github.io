@@ -27,20 +27,19 @@
 
 <div class="site-wrapper">
 
+    {% include navbar.html %}
+
     <div class="site-wrapper-inner">
 
         <div class="cover-container">
-
-            {% include navbar.html %}
 
             <div id="content">
                 {{ content }}
             </div>
 
-            {% include footer.html %}
-
         </div>
 
+        {% include footer.html %}
     </div>
 
 </div>

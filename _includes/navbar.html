@@ -1,4 +1,4 @@
-<div class="masthead clearfix">
+<div class="navbar navbar-fixed-top" role="navigation">
     <div class="inner">
         <h3 class="masthead-brand">Art Beatte IV</h3>
         <nav>
@@ -15,9 +15,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         var segments = location.href.split("/");
-        console.log(segments);
         var tab = segments[segments.length - 2];
-        console.log("tab: " + tab);
         if (tab === 'test') {
             $('#features').addClass('active');
             $('#contacts').addClass('active');

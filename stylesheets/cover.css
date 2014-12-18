@@ -51,13 +51,13 @@ body {
 .cover-container {
     margin-right: auto;
     margin-left: auto;
+    padding-top: 140px;
 }
 
 /* Padding for spacing */
 .inner {
     padding: 30px;
 }
-
 
 /*
  * Header
@@ -109,9 +109,6 @@ body {
  * Cover
  */
 
-.cover {
-    padding: 0 20px;
-}
 .cover .btn-lg {
     padding: 10px 20px;
     font-weight: bold;
@@ -151,6 +148,8 @@ body {
     .mastfoot,
     .cover-container {
         width: 100%; /* Must be percentage or pixels for horizontal alignment */
+        padding-top: 60px;
+        padding-left: 20px;
     }
 }
 
@@ -159,5 +158,6 @@ body {
     .mastfoot,
     .cover-container {
         width: 700px;
+        padding-top: 90px;
     }
 }
