@@ -4,7 +4,7 @@
         <nav>
             <ul class="nav masthead-nav">
                 <li id="home"><a href="../index.html">Home</a></li>
-                <li id="features"><a href="../test">Features</a></li>
+                <li id="projects"><a href="../projects">Projects</a></li>
                 <li id="about"><a href="../about">About</a></li>
                 <li id="contacts"><a href="../test">Contact</a></li>
             </ul>
@@ -17,10 +17,11 @@
         var segments = location.href.split("/");
         var tab = segments[segments.length - 2];
         if (tab === 'test') {
-            $('#features').addClass('active');
             $('#contacts').addClass('active');
         } else if (tab === 'about') {
             $('#about').addClass('active');
+        } else if (tab === 'projects') {
+            $('#projects').addClass('active');
         } else {
             $('#home').addClass('active');
         }
