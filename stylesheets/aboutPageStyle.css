@@ -43,14 +43,14 @@ hr {
 /* Main Content sections */
 .section2 .sectionContentTitle {
 	font-family: sans-serif;
-	color: rgba(146,146,146,1.00);
+	color: rgba(234, 227, 227, 1);
 	font-size: 18px;
 	font-weight: 700;
 }
 
 .section2 .sectionContentSubTitle {
 	font-family: sans-serif;
-	color: rgba(68,67,67,1.00);
+	color: rgba(247, 238, 238, 1);
 	font-size: 14px;
 	font-weight: 400;
 }
