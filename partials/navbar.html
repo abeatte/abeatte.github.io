@@ -1,29 +1,13 @@
-<div class="navbar navbar-fixed-top" role="navigation">
+<div class="navbar navbar-fixed-top" role="navigation" ng-controller="navCtrl">
     <div class="inner">
         <h3 class="masthead-brand">Art Beatte IV</h3>
         <nav>
             <ul class="nav masthead-nav">
-                <li id="home"><a href="../index.html">Home</a></li>
-                <li id="projects"><a href="../projects">Projects</a></li>
-                <li id="about"><a href="../about">About</a></li>
-                <li id="contacts"><a href="../test">Contact</a></li>
+              <li id="home" ng-class="{active: currentTitle === 'home'}"><a ng-click="navigate('home')">Home</a></li>
+              <li id="projects" ng-class="{active: currentTitle === 'projects'}"><a ng-click="navigate('projects')">Projects</a></li>
+              <li id="about" ng-class="{active: currentTitle === 'about'}"><a ng-click="navigate('about')">About</a></li>
+              <li id="contact" ng-class="{active: currentTitle === 'contact'}"><a ng-click="navigate('contact')">Contact</a></li>
             </ul>
         </nav>
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        var segments = location.href.split("/");
-        var tab = segments[segments.length - 2];
-        if (tab === 'test') {
-            $('#contacts').addClass('active');
-        } else if (tab === 'about') {
-            $('#about').addClass('active');
-        } else if (tab === 'projects') {
-            $('#projects').addClass('active');
-        } else {
-            $('#home').addClass('active');
-        }
-    });
-</script>
