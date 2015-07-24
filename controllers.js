@@ -30,9 +30,5 @@ let controllers = angular.module('controllers', []);
 
   }]);
 
-  controllers.controller('contactCtrl', ['$scope', function($scope) {
-
-  }]);
-
 })(controllers);
 

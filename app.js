@@ -34,12 +34,6 @@ var app = angular.module('app', [
           url : '/about',
           templateUrl: 'partials/about.html',
           controller: 'aboutCtrl'
-        })
-        .state('contact', {
-          title: 'contact',
-          url : '/contact',
-          templateUrl: 'partials/contact.html',
-          controller: 'contactCtrl'
         });
 
     $urlRouterProvider.otherwise('/home');
