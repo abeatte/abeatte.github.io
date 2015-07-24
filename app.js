@@ -18,12 +18,6 @@ var app = angular.module('app', [
 
   app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('home', {
-          title: 'home',
-          url : '/home',
-          templateUrl: 'partials/home.html',
-          controller: 'homeCtrl'
-        })
         .state('projects', {
           title: 'projects',
           url : '/projects',
@@ -37,7 +31,7 @@ var app = angular.module('app', [
           controller: 'aboutCtrl'
         });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/projects');
   }]);
 
 })(app);

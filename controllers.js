@@ -18,10 +18,6 @@ let controllers = angular.module('controllers', []);
 
   }]);
 
-  controllers.controller('homeCtrl', ['$scope', '$state', function($scope) {
-
-  }]);
-
   controllers.controller('projectsCtrl', ['$scope', function($scope) {
     $scope.interval = 5000;
     $scope.noWrapSlides = false;
