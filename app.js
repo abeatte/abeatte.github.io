@@ -3,7 +3,8 @@
  */
 var app = angular.module('app', [
   'ui.router',
-  'controllers'
+  'controllers',
+  'ui.bootstrap'
 ]);
 
 (function(app) {

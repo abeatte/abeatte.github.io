@@ -1,0 +1,11 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none
+}
+
+.carousel-caption {
+  left:10%;
+  right:10%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
