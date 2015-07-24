@@ -1,9 +1,0 @@
-# excludes files/folders
-exclude: [index.html.bak]
-
-defaults:
- -
-  scope:
-    path: ""
-  values:
-    author: "Art Beatte"
