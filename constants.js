@@ -23,4 +23,10 @@ let constants = angular.module('constants', []);
     guest: 'guest'
   });
 
+  constants.constant('FEATURE', {
+    login : {
+      on: false
+    }
+  });
+
 })(constants);

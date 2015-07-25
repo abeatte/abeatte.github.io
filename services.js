@@ -73,12 +73,12 @@ let services = angular.module('services', []);
     };
   });
 
-  services.factory('authResolver', ['$q', '$rootScope', '$state', function ($q, $rootScope, $state) {
+  services.factory('authResolver', ['$q', '$rootScope', '$state', 'FEATURE', function ($q, $rootScope, $state, FEATURE) {
     return {
       resolve: function () {
         var deferred = $q.defer();
         var unwatch = $rootScope.$watch('currentUser', function (currentUser) {
-          if (angular.isDefined(currentUser)) {
+          if (FEATURE.login.on) {
             if (currentUser) {
               deferred.resolve(currentUser);
             } else {
@@ -86,6 +86,8 @@ let services = angular.module('services', []);
               $state.go('login');
             }
             unwatch();
+          } else {
+            deferred.resolve();
           }
         });
         return deferred.promise;

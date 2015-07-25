@@ -18,15 +18,19 @@ var app = angular.module('app', [
     }
   ]);
 
-  app.config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES', function ($stateProvider, $urlRouterProvider, USER_ROLES) {
+  app.config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES', 'FEATURE',
+              function ($stateProvider, $urlRouterProvider, USER_ROLES, FEATURE) {
+    if (FEATURE.login.on) {
+      $stateProvider
+          .state('login', {
+            title: 'login',
+            url : '/login',
+            templateUrl: 'partials/login.html',
+            controller: 'loginCtrl',
+            authorizedRoles: [USER_ROLES.all]
+          });
+    }
     $stateProvider
-        .state('login', {
-          title: 'login',
-          url : '/login',
-          templateUrl: 'partials/login.html',
-          controller: 'loginCtrl',
-          authorizedRoles: [USER_ROLES.all]
-        })
         .state('home', {
           title: 'projects',
           url : '/projects',
@@ -67,19 +71,21 @@ var app = angular.module('app', [
     $urlRouterProvider.otherwise('/projects');
   }]);
 
-  app.run(['$rootScope', 'AUTH_EVENTS', 'authService', '$state',
-           function ($rootScope, AUTH_EVENTS, authService, $state) {
+  app.run(['$rootScope', 'AUTH_EVENTS', 'FEATURE', 'authService', '$state',
+           function ($rootScope, AUTH_EVENTS, FEATURE, authService, $state) {
     $rootScope.$on('$stateChangeStart', function (event, next) {
       var authorizedRoles = next.authorizedRoles;
-      if (next.name !== 'login' && !authService.isAuthorized(authorizedRoles)) {
-        event.preventDefault();
-        $state.go('login');
-        if (authService.isAuthenticated()) {
-          // user is not allowed
-          $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
-        } else {
-          // user is not logged in
-          $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
+      if (FEATURE.login.on) {
+        if (next.name !== 'login' && !authService.isAuthorized(authorizedRoles)) {
+          event.preventDefault();
+          $state.go('login');
+          if (authService.isAuthenticated()) {
+            // user is not allowed
+            $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
+          } else {
+            // user is not logged in
+            $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
+          }
         }
       }
     });
