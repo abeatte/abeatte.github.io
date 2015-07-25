@@ -7,6 +7,19 @@ let controllers = angular.module('controllers', []);
 
 (function(controllers) {
 
+  controllers.controller('appCtrl', ['$rootScope', '$scope', 'USER_ROLES', 'authService', '$state',
+                                     function($rootScope, $scope, USER_ROLES, authService, $state) {
+    $rootScope.currentUser = null;
+    $scope.userRoles = USER_ROLES;
+    $scope.isAuthorized = authService.isAuthorized;
+    $scope.isLoginPage = false;
+
+    $scope.setCurrentUser = function (user) {
+      $rootScope.currentUser = user;
+      $state.go('home');
+    };
+  }]);
+
   controllers.controller('navCtrl', ['$scope', '$state', function($scope, $state) {
     $scope.navigate = function(navTo) {
       $state.go(navTo);
@@ -19,6 +32,7 @@ let controllers = angular.module('controllers', []);
   }]);
 
   controllers.controller('projectsCtrl', ['$scope', function($scope) {
+    $scope.isLoginPage = false;
     $scope.interval = 5000;
     $scope.noWrapSlides = false;
     $scope.projects = [
@@ -61,6 +75,7 @@ let controllers = angular.module('controllers', []);
   }]);
 
   controllers.controller('aboutCtrl', ['$scope', function($scope) {
+    $scope.isLoginPage = false;
     $scope.companies = [
       {
         name: "DocuSign",
@@ -87,6 +102,23 @@ let controllers = angular.module('controllers', []);
 
     $scope.isLastCompany = function(company) {
       return !($scope.companies.indexOf(company) + 1 < $scope.companies.length);
+    };
+  }]);
+
+  controllers.controller('loginCtrl', ['$scope', '$rootScope', 'AUTH_EVENTS', 'authService',
+                                       function ($scope, $rootScope, AUTH_EVENTS, authService) {
+    $scope.isLoginPage = true;
+    $scope.credentials = {
+      username: '',
+      password: ''
+    };
+    $scope.login = function (credentials) {
+      authService.login(credentials).then(function (user) {
+        $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+        $scope.setCurrentUser(user);
+      }, function () {
+        $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+      });
     };
   }]);
 
