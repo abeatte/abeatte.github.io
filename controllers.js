@@ -7,14 +7,16 @@ let controllers = angular.module('controllers', []);
 
 (function(controllers) {
 
-  controllers.controller('appCtrl', ['$scope', 'USER_ROLES', 'authService', function($scope, USER_ROLES, authService) {
-    $scope.currentUser = null;
+  controllers.controller('appCtrl', ['$rootScope', '$scope', 'USER_ROLES', 'authService', '$state',
+                                     function($rootScope, $scope, USER_ROLES, authService, $state) {
+    $rootScope.currentUser = null;
     $scope.userRoles = USER_ROLES;
     $scope.isAuthorized = authService.isAuthorized;
     $scope.isLoginPage = false;
 
     $scope.setCurrentUser = function (user) {
-      $scope.currentUser = user;
+      $rootScope.currentUser = user;
+      $state.go('home');
     };
   }]);
 
@@ -30,6 +32,7 @@ let controllers = angular.module('controllers', []);
   }]);
 
   controllers.controller('projectsCtrl', ['$scope', function($scope) {
+    $scope.isLoginPage = false;
     $scope.interval = 5000;
     $scope.noWrapSlides = false;
     $scope.projects = [
@@ -72,6 +75,7 @@ let controllers = angular.module('controllers', []);
   }]);
 
   controllers.controller('aboutCtrl', ['$scope', function($scope) {
+    $scope.isLoginPage = false;
     $scope.companies = [
       {
         name: "DocuSign",
@@ -103,6 +107,7 @@ let controllers = angular.module('controllers', []);
 
   controllers.controller('loginCtrl', ['$scope', '$rootScope', 'AUTH_EVENTS', 'authService',
                                        function ($scope, $rootScope, AUTH_EVENTS, authService) {
+    $scope.isLoginPage = true;
     $scope.credentials = {
       username: '',
       password: ''

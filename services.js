@@ -6,17 +6,28 @@
 let services = angular.module('services', []);
 
 (function(services) {
-  services.factory('authService', ['$http', 'session', function ($http, session) {
+  services.factory('authService', ['$http', 'session', '$q', 'USER_ROLES', function ($http, session, $q, USER_ROLES) {
     var authService = {};
 
     authService.login = function (credentials) {
-      return $http
-          .post('/login', credentials)
-          .then(function (res) {
-            session.create(res.data.id, res.data.user.id,
-                res.data.user.role);
-            return res.data.user;
-          });
+      // TODO: no REST endpoint
+      return $q.when().then(function (res) {
+        session.create(3, 11,
+            'admin');
+        return {
+          id: 11,
+          name: credentials.username,
+          password: credentials.password,
+          role: 'admin'
+        };
+      });
+      //return $http
+      //    .post('/login', credentials)
+      //    .then(function (res) {
+      //      session.create(res.id, res.user.id,
+      //          res.user.role);
+      //      return res.user;
+      //    });
     };
 
     authService.isAuthenticated = function () {
@@ -28,7 +39,8 @@ let services = angular.module('services', []);
         authorizedRoles = [authorizedRoles];
       }
       return (authService.isAuthenticated() &&
-      authorizedRoles.indexOf(session.userRole) !== -1);
+        (authorizedRoles.indexOf(USER_ROLES.all) !== -1 ||
+         authorizedRoles.indexOf(session.userRole) !== -1));
     };
 
     return authService;
@@ -71,7 +83,7 @@ let services = angular.module('services', []);
               deferred.resolve(currentUser);
             } else {
               deferred.reject();
-              $state.go('user-login');
+              $state.go('login');
             }
             unwatch();
           }

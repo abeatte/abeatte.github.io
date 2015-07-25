@@ -25,6 +25,13 @@ var app = angular.module('app', [
           url : '/login',
           templateUrl: 'partials/login.html',
           controller: 'loginCtrl',
+          authorizedRoles: [USER_ROLES.all]
+        })
+        .state('home', {
+          title: 'projects',
+          url : '/projects',
+          templateUrl: 'partials/projects.html',
+          controller: 'projectsCtrl',
           authorizedRoles: [USER_ROLES.all],
           resolve: {
             auth: function resolveAuthentication(authResolver) {
@@ -60,11 +67,13 @@ var app = angular.module('app', [
     $urlRouterProvider.otherwise('/projects');
   }]);
 
-  app.run(['$rootScope', 'AUTH_EVENTS', 'authService', function ($rootScope, AUTH_EVENTS, authService) {
+  app.run(['$rootScope', 'AUTH_EVENTS', 'authService', '$state',
+           function ($rootScope, AUTH_EVENTS, authService, $state) {
     $rootScope.$on('$stateChangeStart', function (event, next) {
       var authorizedRoles = next.authorizedRoles;
-      if (!authService.isAuthorized(authorizedRoles)) {
+      if (next.name !== 'login' && !authService.isAuthorized(authorizedRoles)) {
         event.preventDefault();
+        $state.go('login');
         if (authService.isAuthenticated()) {
           // user is not allowed
           $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
