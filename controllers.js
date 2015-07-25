@@ -65,24 +65,21 @@ let controllers = angular.module('controllers', []);
       {
         name: "DocuSign",
         title: "Software Engineer",
-        description: `"I am the head of the Android Mobile team for DocuSign.
-        I am in charge or delivering top notch quality features as well as maintaining and updating the legacy code.
-        I have utilized cutting edge technologies to accomplish such things as In App Purchasing implementation(s),
-        Google Glass development, Localization framework inception, and much more. The app has over 500,000 downloads
-        and has won several awards, such as the 2014 and 2015 Tabby Awards."`,
+        description: `As lead for the Android Mobile team I am in charge of delivering top notch quality features.
+        I also maintain and update existing legacy code. I utilize cutting edge technologies to accomplish such things
+        as In App Purchasing, Google Glass development, localization framework inception, and more. DocuSign for
+        Android currently has over 500,000 downloads and has won several awards, such as the 2014 and 2015 Tabby Awards.`,
         link: "https://play.google.com/store/apps/details?id=com.docusign.ink",
         linkTitle: "DocuSign for Android"
       },
       {
         name: "SmartScale App",
         title: "Founder, CTO & CEO",
-        description: `"After many mornings weighing myself and laboriously entering the data into spreadsheets for
-        calculation an elegant solution dawned on me: I need an app for this! After months of work I have finally
-        done it. SmartScale App is a creation of my own doing. I set out to create an easy and user friendly way for
-        people to enter in weight data and see their results over time. SmartScale allows a user to enter in weight,
-        body fat and water weight measurements (commonly given by modern scales) and allows them to enter their
-        measurements into the app for display and record keeping. This is a living app with many features and upgrades
-        coming in the future."`,
+        description: `After many mornings weighing myself and laboriously entering my data into spreadsheets for
+        calculation it dawned on me: "I need an app for this!" SmartScale App is an easy and user friendly way to enter
+        weight data and track results over time. It allows a user to enter in weight, body fat and water weight
+        measurements (commonly provided by modern scales) and graphs results over time. This is a living app with many
+        features and enhancements to come.`,
         link: "https://play.google.com/store/apps/details?id=com.art.smartScale",
         linkTitle: "SmartScale App"
       }

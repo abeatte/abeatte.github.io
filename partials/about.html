@@ -1,13 +1,13 @@
 <link href="../css/about.css" rel="stylesheet" type="text/css">
 <div ng-controller="aboutCtrl">
   <div class="profileHeader">
-    <h3>Software Engineer</h3>
+    <h2 class="sectionTitle">Info</h2>
     <hr>
     <p>I thrive on creating new products and solving complex problems.Challenges are my forte.
       I have extensive background in Java and Android development.
-      My skills include everything from Ruby to Java to Angular.js.</p>
+      I am well versed in everything from Ruby to Gradle to Angular.js.</p>
     <p>Beyond coding I enjoy reading about theoretical physics, economics, and the social sciences.
-      I am also an avid weightlifter and runner.
+      I am an avid weightlifter and runner.
       I live in Shoreline WA with my wife, daughter, and dog, Pancho.</p>
   </div>
 
@@ -15,38 +15,43 @@
   <div class="socialNetworkNavBar">
     <div class="socialNetworkNav">
       <!-- Add a Anchor tag with nested img tag here -->
-      <a href="https://www.facebook.com/abeatte" target="_blank"><img src="../res/images/fb_break.png" alt="sample" width="74" height="74"></a>
+      <a href="https://www.facebook.com/abeatte" target="_blank">
+        <img src="../res/images/fb_break.png" alt="sample" width="74" height="74">
+      </a>
     </div>
     <div class="socialNetworkNav">
       <!-- Add a Anchor tag with nested img tag here -->
-      <a href="https://www.linkedin.com/pub/art-beatte-iv/32/2a1/768" target="_blank"><img src="../res/images/li_break.png"  alt="sample" width="74" height="74"></a>
+      <a href="https://www.linkedin.com/pub/art-beatte-iv/32/2a1/768" target="_blank">
+        <img src="../res/images/li_break.png"  alt="sample" width="74" height="74">
+      </a>
     </div>
     <div class="socialNetworkNav">
       <!-- Add a Anchor tag with nested img tag here -->
-      <a href="https://plus.google.com/+ArtBeatte" target="_blank"><img src="../res/images/g_break.png"  alt="sample" width="74" height="74"></a>
+      <a href="https://plus.google.com/+ArtBeatte" target="_blank">
+        <img src="../res/images/g_break.png"  alt="sample" width="74" height="74">
+      </a>
     </div>
   </div>
 
-  <!-- content -->
+  <br>
+
   <div class="mainContent">
 
-    <!-- Previous experience details -->
     <section class="section">
       <h2 class="sectionTitle">Current Work</h2>
       <hr class="sectionTitleRule">
 
-      <!-- First Title & company details  -->
       <div class="sectionContent" ng-repeat="company in companies">
-        <h2 class="sectionContentTitle">[[company.name]]</h2>
-        <h3 class="sectionContentSubTitle">[[company.title]]</h3>
+        <div>
+          <span class="sectionContentTitle">[[company.name]] - </span>
+          <span class="sectionContentSubTitle">[[company.title]]</span>
+        </div>
         <p class="sectionContent">[[company.description]]</p>
-        <a href="[[company.link]]">[[company.linkTitle]]</a>
         <br ng-if="!isLastCompany(company)">
         <br ng-if="!isLastCompany(company)">
       </div>
 
     </section>
-    <!-- Links to expore your past projects and download your CV -->
     <div class="externalResourcesNav">
       <button type="button" class="btn btn-primary btn-lg">
         <a href="../res/raw/WebResume.pdf" title="Download CV Link" download="ArtBeatte">Curriculum Vitae</a>
@@ -56,6 +61,6 @@
         <a href="https://github.com/abeatte">GitHub</a>
       </button>
     </div>
+    <br>
   </div>
-</div>
 </div>
