@@ -1,5 +1,8 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
+*{  font-family: "Linux Libertine",Georgia,Times,serif;
+}
+
 .carousel-control.left, .carousel-control.right {
   background-image: none
 }
@@ -7,9 +10,6 @@
   left:10%;
   right:10%;
   background-color: rgba(0, 0, 0, 0.5);
-}
-.btn-primary {
-  font-family: "Linux Libertine",Georgia,Times,serif;
 }
 
 /* Footer */
@@ -20,7 +20,6 @@
   background-color: rgba(61, 61, 61, .95);
 }
 .footerDisclaimer {
-  font-family: sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: rgba(104,103,103,1.00);
@@ -31,7 +30,6 @@
   font-weight: 400;
 }
 .footerNote {
-  font-family: sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: rgba(104,103,103,1.00);
@@ -48,12 +46,10 @@
   .footerDisclaimer {
     float: left;
     margin-left: 3%;
-    font-family: sans-serif;
   }
   .footerNote {
     float: right;
     margin-right: 3%;
-    font-family: sans-serif;
   }
 }
 
@@ -63,11 +59,9 @@
   .footerDisclaimer {
     float: left;
     margin-left: 3%;
-    font-family: sans-serif;
   }
   .footerNote {
     float: right;
     margin-right: 3%;
-    font-family: sans-serif;
   }
 }

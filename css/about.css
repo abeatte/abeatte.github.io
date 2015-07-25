@@ -3,14 +3,12 @@
 /* Global Styles */
 /* Header */
 .profileHeader h1 {
-  font-family: 'Montserrat', sans-serif;
   color: rgba(146,146,146,1.00);
   font-size: 30px;
   font-weight: 700;
   line-height: 24px;
 }
 .profileHeader h3 {
-  font-family: sans-serif;
   color: rgba(146,146,146,1.00);
   font-size: 16px;
   font-weight: 700;
@@ -21,7 +19,6 @@ hr {
   height: 1px;
 }
 .profileHeader p {
-  font-family: sans-serif;
   color: rgba(146,146,146,1.00);
   font-size: 14px;
   font-weight: 400;
@@ -48,19 +45,16 @@ hr {
   clear: both;
 }
 .section .sectionContentTitle {
-  font-family: sans-serif;
   color: rgba(234, 227, 227, 1);
   font-size: 18px;
   font-weight: 700;
 }
 .section .sectionContentSubTitle {
-  font-family: sans-serif;
   color: rgba(247, 238, 238, 1);
   font-size: 14px;
   font-weight: 400;
 }
 .section .sectionContent {
-  font-family: sans-serif;
   color: rgba(146,146,146,1.00);
   font-size: 14px;
   font-weight: 400;
@@ -76,10 +70,6 @@ hr {
 /* Media query for Mobile devices*/
 @media only screen and (min-width : 285px) and (max-width : 480px) {
   /* Header */
-  .profileHeader {
-    text-align: center;
-    margin-top:10%;
-  }
   .profileHeader p {
     text-align: justify;
   }
@@ -108,9 +98,6 @@ hr {
 /* Media Query for Tablets */
 @media only screen and (min-width : 481px) and (max-width : 1024px) {
   /* Header */
-  .profileHeader {
-    text-align: left;
-  }
   .socialNetworkNavBar .socialNetworkNav {
     width: 74px;
     height: 74px;
@@ -121,7 +108,6 @@ hr {
   .section .sectionContent {
     padding: 0;
     margin-left: 20%;
-    font-family: sans-serif;
     margin-top: 5%;
     margin-bottom: 5%;
   }
@@ -138,9 +124,6 @@ hr {
 /* Desktops and laptops  */
 @media only screen and (min-width:1025px) {
   /* Header */
-  .profileHeader {
-    text-align: left;
-  }
   .socialNetworkNavBar .socialNetworkNav {
     width: 74px;
     height: 74px;
@@ -153,7 +136,6 @@ hr {
   }
   .section .sectionContent {
     padding: 0;
-    font-family: sans-serif;
   }
   .mainContent .externalResourcesNav {
     margin-top: 40px;
