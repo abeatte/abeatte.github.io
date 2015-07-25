@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* Global Styles */
+/* Header */
 .profileHeader h1 {
   font-family: 'Montserrat', sans-serif;
   color: rgba(146,146,146,1.00);
@@ -42,26 +43,6 @@ hr {
   opacity:0.5;
 }
 /* Main Content sections */
-.section2 .sectionContentTitle {
-  font-family: sans-serif;
-  color: rgba(234, 227, 227, 1);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.section2 .sectionContentSubTitle {
-  font-family: sans-serif;
-  color: rgba(247, 238, 238, 1);
-  font-size: 14px;
-  font-weight: 400;
-}
-.section2 .sectionContent {
-  font-family: sans-serif;
-  color: rgba(146,146,146,1.00);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.8;
-}
 .mainContent {
   display: block;
   clear: both;
@@ -76,6 +57,25 @@ hr {
 }
 .mainContent .externalResourcesNav .externalResources:hover {
   background-color: rgba(153,153,153,1.00);
+}
+.section .sectionContentTitle {
+  font-family: sans-serif;
+  color: rgba(234, 227, 227, 1);
+  font-size: 18px;
+  font-weight: 700;
+}
+.section .sectionContentSubTitle {
+  font-family: sans-serif;
+  color: rgba(247, 238, 238, 1);
+  font-size: 14px;
+  font-weight: 400;
+}
+.section .sectionContent {
+  font-family: sans-serif;
+  color: rgba(146,146,146,1.00);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
 }
 .externalResourcesNav .externalResources a {
   font-family: 'Montserrat', sans-serif;
@@ -95,9 +95,6 @@ hr {
 /* Media query for Mobile devices*/
 @media only screen and (min-width : 285px) and (max-width : 480px) {
   /* Header */
-  .profilePhoto {
-    display: inline-block;
-  }
   .profileHeader {
     text-align: center;
     margin-top:10%;
@@ -112,38 +109,18 @@ hr {
     margin-right: 23px;
   }
   /* Main content sections */
-  .mainContent .section1 {
-    text-align: center;
-    margin-bottom: 10%;
-  }
-  .section1 .section1Title, .section2 .section1Title {
-    text-align: center;
-  }
-  .section1 .sectionTitleRule, .section2 .sectionTitleRule {
-    width: 100%;
-  }
-  .section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
-    display: none;
-  }
-  .mainContent .section1 .section1Content {
-    display: inline-block;
-    text-align: left;
-    font-family: sans-serif;
-    text-align: justify;
-  }
-  .mainContent .section2 {
+  .mainContent .section {
     display: block;
     text-align: center;
     clear: both;
   }
-  .section2 .section2Content {
+  .section .sectionContent {
     margin-top: 10%;
     text-align: justify;
     margin-bottom: 10%;
   }
   .mainContent .externalResourcesNav {
     margin-bottom: 10%;
-
   }
   .mainContent .externalResourcesNav .externalResources {
     width: 100%;
@@ -153,7 +130,7 @@ hr {
 
 /* Media Query for Tablets */
 @media only screen and (min-width : 481px) and (max-width : 1024px) {
-
+  /* Header */
   .profileHeader {
     text-align: left;
   }
@@ -164,23 +141,7 @@ hr {
     margin-right: 23px;
   }
   /* Main content and sections */
-  .section1 .section1Title, .section2 .section1Title {
-    text-align: center;
-  }
-  .section1 .sectionTitleRule, .section2 .sectionTitleRule {
-    width: 100%;
-  }
-  .section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
-    display: none;
-  }
-  .mainContent .section1 .section1Content {
-    display: block;
-    margin: 0 0 0 20%;
-    font-family: sans-serif;;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  .section2 .section2Content {
+  .section .sectionContent {
     padding: 0;
     margin-left: 20%;
     font-family: sans-serif;
@@ -215,21 +176,10 @@ hr {
     margin-right: 23px;
   }
   /* Main content sections */
-  .section1 .sectionTitleRule, .section2 .sectionTitleRule {
-    width: 22.5%;
-  }
-  .mainContent .section1 .section1Content {
-    display: block;
-    margin-top: 0%;
-    margin-right: 0%;
-    margin-left: 26%;
-    margin-bottom: 0%;
-    font-family: sans-serif;
-  }
-  .mainContent .section2 {
+  .mainContent .section {
     clear: both;
   }
-  .section2 .section2Content {
+  .section .sectionContent {
     padding: 0;
     font-family: sans-serif;
   }
