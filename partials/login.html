@@ -1,13 +1,14 @@
-<form name="loginForm" ng-controller="loginCtrl" ng-submit="login(credentials)" novalidate>
+<form class="form-inline" name="loginForm" ng-controller="loginCtrl" ng-submit="login(credentials)">
 
-  <label for="username">Username:</label>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="name" ng-model="credentials.username">
+  </div>
 
-  <input type="text" id="username" ng-model="credentials.username">
-
-  <label for="password">Password:</label>
-
-  <input type="password" id="password" ng-model="credentials.password">
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="password" ng-model="credentials.password">
+  </div>
 
   <button type="submit" class="btn btn-primary">Login</button>
-
 </form>
