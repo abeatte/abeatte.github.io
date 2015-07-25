@@ -91,4 +91,3 @@ let controllers = angular.module('controllers', []);
   }]);
 
 })(controllers);
-
