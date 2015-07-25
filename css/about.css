@@ -105,14 +105,7 @@ hr {
     margin-right: 23px;
   }
   /* Main content and sections */
-  .section .sectionContent {
-    padding: 0;
-    margin-left: 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
   .mainContent .externalResourcesNav {
-    margin-left: 20%;
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
