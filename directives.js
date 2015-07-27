@@ -1,11 +1,11 @@
 /**
  * Created by art.beatte on 7/24/15.
  */
-'use strict';
-
-let directives = angular.module('directives', []);
+var directives = angular.module('directives', []);
 
 (function(directives) {
+  'use strict';
+
   directives.directive('loginDialog', ['AUTH_EVENTS', function (AUTH_EVENTS) {
     return {
       restrict: 'A',

@@ -1,11 +1,11 @@
 /**
  * Created by art.beatte on 7/24/15.
  */
-'use strict';
-
-let services = angular.module('services', []);
+var services = angular.module('services', []);
 
 (function(services) {
+  'use strict';
+
   services.factory('authService', ['$http', 'session', '$q', 'USER_ROLES', function ($http, session, $q, USER_ROLES) {
     var authService = {};
 

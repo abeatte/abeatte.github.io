@@ -1,11 +1,10 @@
 /**
  * Created by art.beatte on 7/24/15.
  */
-'use strict';
-
-let constants = angular.module('constants', []);
+var constants = angular.module('constants', []);
 
 (function(constants) {
+  'use strict';
 
   constants.constant('AUTH_EVENTS', {
     loginSuccess: 'auth-login-success',

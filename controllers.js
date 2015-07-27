@@ -1,11 +1,10 @@
 /**
  * Created by art.beatte on 7/23/15.
  */
-'use strict';
-
-let controllers = angular.module('controllers', []);
+var controllers = angular.module('controllers', []);
 
 (function(controllers) {
+  'use strict';
 
   controllers.controller('appCtrl', ['$rootScope', '$scope', 'USER_ROLES', 'authService', '$state',
                                      function($rootScope, $scope, USER_ROLES, authService, $state) {
