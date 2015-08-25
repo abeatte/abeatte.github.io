@@ -92,8 +92,8 @@ var controllers = angular.module('controllers', []);
         description: `After many mornings weighing myself and laboriously entering my data into spreadsheets for
         calculation it dawned on me: "I need an app for this!" SmartScale App is an easy and user friendly way to enter
         weight data and track results over time. It allows a user to enter in weight, body fat and water weight
-        measurements (commonly provided by modern scales) and graphs results over time. This is a living app with many
-        features and enhancements to come.`,
+        measurements (commonly provided by modern scales) and graphs results over time. SmartScale is a second place
+        winner in the 2015 Google Fit Developer Challenge with many features and enhancements to come.`,
         link: "https://play.google.com/store/apps/details?id=com.art.smartScale",
         linkTitle: "SmartScale App"
       }
