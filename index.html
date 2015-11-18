@@ -55,6 +55,9 @@
         <li>
           <a href="#projects">Projects</a>
         </li>
+        <li class="hidden">
+          <a href="/labs">Labs</a>
+        </li>
         <li>
           <a href="#contact">Contact</a>
         </li>
@@ -91,7 +94,7 @@
               <a href="https://stackoverflow.com/users/1454347/astryk"
                  class="btn btn-default btn-lg"><i class="fa fa-stack-overflow fa-fw"></i> <span
                 class="network-name">Stack Overflow</span></a>
-            </li
+            </li>
           </ul>
         </div>
       </div>
@@ -207,6 +210,10 @@
           <li>
             <a href="#projects">Projects</a>
           </li>
+          <li class="footer-menu-divider hidden">&sdot;</li>
+          <li class="hidden">
+            <a href="/labs">Labs</a>
+          </li>
           <li class="footer-menu-divider">&sdot;</li>
           <li>
             <a href="#contact">Contact</a>
@@ -223,6 +230,14 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<!-- konami -->
+<script src="js/konami.js"></script>
+<script>
+  var easter_egg = new Konami(function() {
+    $('.hidden').removeClass('hidden');
+  })
+</script>
 
 </body>
 
