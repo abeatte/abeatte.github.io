@@ -7,6 +7,7 @@ To run locally run:
 Then browse to https://localhost:4000
 
 TODO: 
+
 1. Update salient informatttion
 2. implement parallax
     a. http://stephband.info/jparallax/
