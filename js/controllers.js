@@ -37,5 +37,8 @@ var controllers = angular.module('controllers', []);
 
   }]);
 
-})(controllers);
+  controllers.controller('privacyPolicyCtrl', ['$scope', function($scope) {
 
+  }]);
+
+})(controllers);

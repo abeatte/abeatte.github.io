@@ -28,6 +28,12 @@ var app = angular.module('site', [
           url : '/labs',
           templateUrl: 'parts/labs.html',
           controller: 'labsCtrl'
+        })
+        .state('privacy_policy', {
+          title: 'privacy policy',
+          url : '/privacy_policy',
+          templateUrl: 'parts/privacyPolicy.html',
+          controller: 'privacyPolicyCtrl'
         });
 
     $urlRouterProvider.otherwise('/home');
