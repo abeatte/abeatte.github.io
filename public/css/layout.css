@@ -24,6 +24,8 @@
 
 body { background: #0f0f0f; }
 
+.hidden { display: none !important; }
+
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
@@ -412,6 +414,17 @@ ul#nav li.current a { color: #F06000; }
   100% { width: 80%;  }
 }  */
 
+
+/* ------------------------------------------------------------------ */
+/* db. Portfolio Section
+/* ------------------------------------------------------------------ */
+
+/* Secret Content */
+
+.row.secret div {
+   text-align: center;
+}
+
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
 /* ------------------------------------------------------------------ */
@@ -505,6 +518,7 @@ ul#nav li.current a { color: #F06000; }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
 }
+
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
    font: 14px/21px 'opensans-bold', sans-serif;

@@ -76,6 +76,10 @@
       }
     ]
   },
+  "secret":{
+    "title":"Under Construction",
+    "image":"under-construction.png"
+  },
   "portfolio":{
     "projects": [
       {
