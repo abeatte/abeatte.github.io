@@ -1,0 +1,104 @@
+{
+  "main": {
+    "name":"Art Beatte IV",
+    "occupation":"Senior Software Engineer",
+    "description":"I build cool shit at scale!",
+    "image":"headshot.png",
+    "bio":"I am born and raised in North Seattle. Building things is my passion. I am incapable of stopping. I currently work at Facebook. When I am not there I create wood artwork, lift weights, invest in financial markets and generally try to learn something new every day.",
+    "address":{
+      "city":"Bothell",
+      "state":"WA"
+    },
+    "website": "http://www.artbeatte.com",
+    "resumedownload":"http://artbeatte.com/docs/Resume2020.pdf",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/abeatte",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/abeatte",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/artbeatte/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/abeatte",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"Stack Overflow",
+        "url":"https://stackoverflow.com/users/1454347/astryk",
+        "className":"fa fa-stack-overflow"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"I engineer interesting things, using cutting edge technology, at scale.",
+    "education":[
+      {
+        "school":"University of Washington",
+        "degree":"Graduate Certificate in Software Design & Development",
+        "graduated":"June 2013",
+        "description":"Data structures; SDLC, Software modeling, Systems programming, Testing and QA."
+      },
+      {
+        "school":"North Seattle Community College",
+        "degree":"A.S. in Computer Science",
+        "graduated":"August 2012",
+        "description":"OOP; Modularity; Python; Java; JUnit Testing; GUI."
+      },
+      {
+        "school":"Washington State University",
+        "degree":"B.A. in Sociology with Minor in Psychology",
+        "graduated":"December 2009",
+        "description":"Statistics; Demography; Personality; Deviance; Criminal Justice; Social Grouping."
+      }
+    ],
+    "work":[
+      {
+        "company":"Facebook",
+        "title":"Senior Software Engineer",
+        "years":"May 2015 - Present",
+        "description":"I began my work on Facebook Login for Android, web, SDK, etc. (lived through Cambridge Analytica). From there I ran the Business Login team from inception through to launch. I have worked on Marketplace Growth as well as Rooms for Web."
+      },
+      {
+        "company":"DocuSign",
+        "title":"Sorfware Engineer",
+        "years":"December 2012 - May 2016",
+        "description":"Joined on as part of the Android mobile team. Eventually lead the Android and Mobile teams. Moved on to a Web Admin Console team and began work on APIs."
+      }
+    ]
+  },
+  "secret":{
+    "title":"Under Construction",
+    "image":"under-construction.png"
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"SmartScale",
+        "category":"Fitness and Weight Tracking Android app",
+        "image":"ss-logo.png",
+        "url":"https://play.google.com/store/apps/details?id=com.art.smartScale"
+      },
+      {
+        "title":"This Website",
+        "category":"A React based personal website",
+        "image":"website.png",
+        "url":"http://www.artbeatte.com"
+      },
+      {
+        "title":"Atlas - Location Tracking App",
+        "category":"(offline now) Location tracking Android app",
+        "image":"al-logo.png"
+      }
+    ]
+  }
+}
