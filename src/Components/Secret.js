@@ -10,7 +10,7 @@ class Secret extends Component {
     }
 
     return (
-      <section className="hidden" id="secret">
+      <section className={this.props.konami ? "" : "hidden"} id="secret">
 
       <div className="row secret">
          <div className="twelve columns collapsed">

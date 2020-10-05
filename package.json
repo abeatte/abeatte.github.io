@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://artbeatte.com",
   "dependencies": {
+    "classnames": "^2.2.6",
     "jquery": "^3.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-ga": "^2.3.5",
+    "react-konami-code": "^2.0.1-beta.1",
     "react-scripts": "1.0.17"
   },
   "scripts": {

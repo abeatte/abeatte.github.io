@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Konami from 'react-konami-code';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
@@ -14,7 +15,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      foo: 'bar',
+      konami: false,
       resumeData: {}
     };
 
@@ -42,13 +43,20 @@ class App extends Component {
     this.getResumeData();
   }
 
+  konami = () => {
+    this.setState((state) => {
+      return {konami: !state.konami};
+    });
+  }
+
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
+        <Konami className="hidden" disabled={false} action={this.konami} timeout={25} />
+        <Header konami={this.state.konami} data={this.state.resumeData.main}/>
         <About data={this.state.resumeData.main}/>
         <Resume data={this.state.resumeData.resume}/>
-        <Secret data={this.state.resumeData.secret}/>
+        <Secret  konami={this.state.konami} data={this.state.resumeData.secret}/>
         <Portfolio data={this.state.resumeData.portfolio}/>
         <Footer data={this.state.resumeData.main}/>
       </div>
