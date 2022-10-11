@@ -1,5 +1,5 @@
 Develop: `npm start`
-Deploy: `npm run depoys`
+Deploy: `npm run deploy`
 
 # React JS Resume Web App Template      
 ![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true "ReactJS Resume Website Template")
