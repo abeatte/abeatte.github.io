@@ -1,8 +1,8 @@
 {
   "main": {
     "name":"Art Beatte IV",
-    "occupation":"Senior Software Engineer",
-    "description":"I build cool shit at scale!",
+    "occupation":"Software Engineering Manager",
+    "description":"I build cool shit and support world class engineers!",
     "image":"headshot.png",
     "bio":"I am born and raised in North Seattle. Building things is my passion. I am incapable of stopping. I currently work at Facebook. When I am not there I create wood artwork, lift weights, invest in financial markets and generally try to learn something new every day.",
     "address":{
@@ -65,7 +65,7 @@
       {
         "company":"Facebook",
         "title":"Senior Software Engineer",
-        "years":"May 2015 - Present",
+        "years":"May 2016 - Present",
         "description":"I began my work on Facebook Login for Android, web, SDK, etc. (lived through Cambridge Analytica). From there I ran the Business Login team from inception through to launch. I have worked on Marketplace Growth as well as Rooms for Web."
       },
       {
