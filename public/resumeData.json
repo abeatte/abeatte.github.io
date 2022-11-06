@@ -89,10 +89,10 @@
         "url":"https://play.google.com/store/apps/details?id=com.art.smartScale"
       },
       {
-        "title":"This Website",
-        "category":"A React based personal website",
-        "image":"website.png",
-        "url":"http://www.artbeatte.com"
+        "title":"Garbage Game",
+        "category":"Basic pixel game",
+        "image":"garbage.png",
+        "url":"https://abeatte.github.io/garbage"
       },
       {
         "title":"Atlas - Location Tracking App",
