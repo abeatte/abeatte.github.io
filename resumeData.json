@@ -1,10 +1,10 @@
 {
   "main": {
     "name":"Art Beatte IV",
-    "occupation":"Software Engineering Manager",
-    "description":"I build cool shit and support world class engineers!",
+    "occupation":"Software Engineer",
+    "description":"A product focused software engineer with an extreme bias for action. I thrive on reducing ambiguity by turning product ideas into real world applications solving important problems.",
     "image":"headshot.png",
-    "bio":"I am born and raised in North Seattle. Building things is my passion. I work at Meta (Facebook). When I am not there I create wood artwork, lift weights, invest and generally try to learn something new every day.",
+    "bio":"I am born and raised in North Seattle. Building things is my passion. When I am not software engineering I create wood artwork, lift weights, invest and generally try to learn something new every day.",
     "address":{
       "city":"Bothell",
       "state":"WA"
@@ -40,7 +40,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"I engineer interesting things, using cutting edge technology, at scale.",
+    "skillmessage":"I build useful things, using cutting edge technology, at scale.",
     "education":[
       {
         "school":"University of Washington",
@@ -67,6 +67,12 @@
         "title":"Senior Software Engineer",
         "years":"May 2016 - Present",
         "description":"I began my work on Facebook Login for Android, web, SDK, etc. (lived through Cambridge Analytica). From there I ran the Business Login team from inception through to launch. I have worked on Marketplace Growth as well as Rooms for Web."
+      },
+      {
+        "company":"Facebook",
+        "title":"Software Engineering Manager",
+        "years":"September 2021 - February 2023",
+        "description":"I lead a team of 7 engineers working on Messenger Desktop"
       },
       {
         "company":"DocuSign",
