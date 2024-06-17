@@ -2,15 +2,15 @@
   "main": {
     "name":"Art Beatte IV",
     "occupation":"Software Engineer",
-    "description":"A product focused software engineer with an extreme bias for action. I thrive on reducing ambiguity by turning product ideas into real world applications solving important problems.",
+    "description":"A product focused software engineer with a bias for action and over 10 years of industry experience. I thrive on reducing ambiguity to turn product ideas into real world solutions.",
     "image":"headshot.png",
-    "bio":"I am born and raised in North Seattle. Building things is my passion. When I am not software engineering I create wood artwork, lift weights, invest and generally try to learn something new every day.",
+    "bio":"I was born and raised just North of Seattle. Building things is my passion. When I am not software engineering I create wood artwork, lift weights, invest and generally try to learn something new every day.",
     "address":{
       "city":"Bothell",
       "state":"WA"
     },
     "website": "http://www.artbeatte.com",
-    "resumedownload":"http://artbeatte.com/docs/Resume2020.pdf",
+    "resumedownload":"http://artbeatte.com/docs/Resume2024.pdf",
     "social":[
       {
         "name":"facebook",
