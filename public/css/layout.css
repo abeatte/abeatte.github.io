@@ -236,10 +236,6 @@ ul#nav li.current a { color: #F06000; }
    margin-top: 6px;
    background: #444;
 }
-#resume .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
-}
 #resume .download .button i {
    margin-right: 15px;
    font-size: 20px;
