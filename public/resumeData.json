@@ -1,7 +1,7 @@
 {
   "main": {
     "name":"Art Beatte IV",
-    "occupation":"Software Engineer",
+    "occupation":"Sr. Software Engineer",
     "description":"A product focused software engineer with a bias for action and over 10 years of industry experience. I thrive on reducing ambiguity to turn product ideas into real world solutions.",
     "image":"headshot.png",
     "bio":"I was born and raised just North of Seattle. Building things is my passion. When I am not software engineering I create wood artwork, lift weights, invest and generally try to learn something new every day.",
@@ -10,7 +10,7 @@
       "state":"WA"
     },
     "website": "http://www.artbeatte.com",
-    "resumedownload":"http://artbeatte.com/docs/Resume2024.pdf",
+    "resumedownload":"http://artbeatte.com/docs/Art_Beatte_Resume.docx",
     "social":[
       {
         "name":"facebook",
@@ -64,15 +64,15 @@
     "work":[
       {
         "company":"Facebook",
-        "title":"Senior Software Engineer",
+        "title":"Sr. Software Engineer",
         "years":"May 2016 - Present",
-        "description":"I began my work on Facebook Login for Android, web, SDK, etc. (lived through Cambridge Analytica). From there I ran the Business Login team from inception through to launch. I have worked on Marketplace Growth as well as Rooms for Web."
+        "description":"I've been on a handful of different teams ranging from Facebook Login to Marketplace, to Messenger. I am currently the Tech Lead on the Ads Manager Desktop."
       },
       {
         "company":"Facebook",
         "title":"Software Engineering Manager",
         "years":"September 2021 - February 2023",
-        "description":"I lead a team of 7 engineers working on Messenger Desktop"
+        "description":"I support a team of 7 engineers working on Messenger Desktop"
       },
       {
         "company":"DocuSign",
