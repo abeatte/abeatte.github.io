@@ -21,11 +21,16 @@ class Resume extends Component {
     return (
       <section id="resume">
 
-        <div className="row">
-          <div className="columns download">
-            <p>
-              <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
-            </p>
+        <div className="row work">
+          <div className="three columns header-col"></div>
+          <div className="nine columns main-col download">
+            <div className="row item">
+              <div className="twelve columns">
+                <p>
+                  <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
