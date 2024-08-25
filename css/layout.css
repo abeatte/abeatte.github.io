@@ -58,7 +58,10 @@ header .banner {
    text-align: center;
 }
 
-header .banner-text { width: 100%; }
+header .banner-text { 
+   width: 100%;
+   padding-top: 35px;
+ }
 header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
@@ -227,8 +230,13 @@ ul#nav li.current a { color: #F06000; }
    overflow: hidden;
 }
 
+@media only screen and (max-width: 767px) {
+   #resume .download {
+      text-align: center;
+   }
+}
+
 #resume .download {
-   float: right;
    width: 75%;
    padding-top: 6px;
 }
@@ -237,7 +245,7 @@ ul#nav li.current a { color: #F06000; }
    background: #444;
 }
 #resume .download .button:hover {
-   background: #fff;
+   /* background: #fff; */
    color: #2B2B2B;
 }
 #resume .download .button i {

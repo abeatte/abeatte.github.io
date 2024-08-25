@@ -10,7 +10,6 @@
       "state":"WA"
     },
     "website": "http://www.artbeatte.com",
-    "resumedownload":"http://artbeatte.com/docs/Art_Beatte_Resume.docx",
     "social":[
       {
         "name":"facebook",
@@ -39,7 +38,8 @@
       }
     ]
   },
-  "resume":{
+  "resume":{    
+    "download": "http://artbeatte.com/docs/Art_Beatte_Resume.docx",
     "skillmessage":"I build useful things, using cutting edge technology, at scale.",
     "education":[
       {
@@ -63,13 +63,13 @@
     ],
     "work":[
       {
-        "company":"Facebook",
+        "company":"Facebook / Meta",
         "title":"Sr. Software Engineer",
         "years":"May 2016 - Present",
         "description":"I've been on a handful of different teams ranging from Facebook Login to Marketplace, to Messenger. I am currently the Tech Lead on the Ads Manager Desktop."
       },
       {
-        "company":"Facebook",
+        "company":"Facebook / Meta",
         "title":"Software Engineering Manager",
         "years":"September 2021 - February 2023",
         "description":"I support a team of 7 engineers working on Messenger Desktop"
