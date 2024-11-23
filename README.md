@@ -1,3 +1,5 @@
+# Useful commands 
+Install: `npm install`
 Develop: `npm start`
 Deploy: `npm run deploy`
 
