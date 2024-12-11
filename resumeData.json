@@ -63,9 +63,15 @@
     ],
     "work":[
       {
+        "company":"Amazon Web Services",
+        "title":"Sr. Software Engineer",
+        "years":"October 2024 - Present",
+        "description":"I work on the Secure Token Service (STS) within Identity and Account Management (IAM)."
+      },
+      {
         "company":"Facebook / Meta",
         "title":"Sr. Software Engineer",
-        "years":"May 2016 - Present",
+        "years":"May 2016 - June 2024",
         "description":"I've been on a handful of different teams ranging from Facebook Login to Marketplace, to Messenger. I am currently the Tech Lead on the Ads Manager Desktop."
       },
       {
