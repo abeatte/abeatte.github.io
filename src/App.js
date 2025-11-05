@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Konami from 'react-konami-code';
 import ReactGA from 'react-ga';
 import $ from 'jquery';
