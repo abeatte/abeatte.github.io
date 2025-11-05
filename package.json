@@ -13,6 +13,7 @@
     "react-konami-code": "^2.3.0"
   },
   "scripts": {
+    "clean": "sudo rm -r build node_modules",
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve@latest ./build",
