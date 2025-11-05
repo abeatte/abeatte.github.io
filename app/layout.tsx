@@ -1,7 +1,6 @@
 import '../public/css/default.css';
 import '../public/css/layout.css';
 import '../public/css/media-queries.css';
-import '../public/css/magnific-popup.css';
 
 import type { Metadata } from 'next'
 
