@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll';
 
 class Resume extends Component {
   render() {
@@ -19,50 +20,50 @@ class Resume extends Component {
     }
 
     return (
-      <section id="resume">
-
-        <div className="row work">
-          <div className="three columns header-col"></div>
-          <div className="nine columns main-col download">
-            <div className="row item">
-              <div className="twelve columns">
-                <p>
-                  <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
-                </p>
+      <Element name='resume'>
+        <section id="resume">
+          <div className="row work">
+            <div className="three columns header-col"></div>
+            <div className="nine columns main-col download">
+              <div className="row item">
+                <div className="twelve columns">
+                  <p>
+                    <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1><span>Work</span></h1>
-          </div>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1><span>Work</span></h1>
+            </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                {work}
+            <div className="nine columns main-col">
+              <div className="row item">
+                <div className="twelve columns">
+                  {work}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1><span>Education</span></h1>
-          </div>
+          <div className="row education">
+            <div className="three columns header-col">
+              <h1><span>Education</span></h1>
+            </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                {education}
+            <div className="nine columns main-col">
+              <div className="row item">
+                <div className="twelve columns">
+                  {education}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-      </section>
+        </section>
+      </Element>
     );
   }
 }

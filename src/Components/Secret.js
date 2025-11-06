@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Element } from 'react-scroll';
 
 class Secret extends Component {
   render() {
@@ -10,20 +11,20 @@ class Secret extends Component {
     }
 
     return (
-      <section className={this.props.konami ? "" : "hidden"} id="secret">
+      <Element name='secret' className={this.props.konami ? "" : "hidden"}>
+        <section  id="secret">
+          <div className="row secret">
+            <div className="twelve columns collapsed">
+                <h1><span>Top Secret</span></h1>
 
-      <div className="row secret">
-         <div className="twelve columns collapsed">
-            <h1><span>Top Secret</span></h1>
-
-            <div className="bgrid-thirds s-bgrid-halves cf">
-              {img}
-            </div>
-            
+                <div className="bgrid-thirds s-bgrid-halves cf">
+                  {img}
+                </div>
+                
+              </div>
           </div>
-          
-      </div>
-   </section>
+        </section>
+    </Element>
     );
   }
 }

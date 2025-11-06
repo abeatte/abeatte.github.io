@@ -18,11 +18,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-ga": "^3.3.1",
-    "react-konami-code": "^2.3.0"
+    "react-konami-code": "^2.3.0",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "@types/node": "24.10.0",
     "@types/react": "19.2.2",
+    "@types/react-scroll": "^1.8.10",
     "gh-pages": "^6.3.0",
     "npm-check-updates": "^19.1.2",
     "typescript": "5.9.3"
