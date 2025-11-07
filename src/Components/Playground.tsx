@@ -1,3 +1,7 @@
+import Secret from "./Secret"
+
 export default function Playground() {
-    return <h1>Playground</h1>
+    return (
+        <Secret />
+    );
 }
