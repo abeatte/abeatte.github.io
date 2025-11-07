@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import { Element } from 'react-scroll';
 
-class About extends Component {
-   render() {
+export default function About({ data }: { data: any }) {
+   if (data) {
+      var profilepic = "images/" + data.image;
+      var bio = data.bio;
+   }
 
-      if (this.props.data) {
-         var profilepic = "images/" + this.props.data.image;
-         var bio = this.props.data.bio;
-      }
-
-      return (
+   return (
+      <Element name='about'>
          <section id="about">
             <div className="row">
                <div className="three columns">
@@ -19,10 +18,7 @@ class About extends Component {
                   <p>{bio}</p>
                </div>
             </div>
-
          </section>
-      );
-   }
+      </Element>
+   );
 }
-
-export default About;

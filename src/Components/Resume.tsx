@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
+import { Element } from 'react-scroll';
 
-class Resume extends Component {
-  render() {
+export default function Resume({ data }: { data: any }) {
+  if (data) {
+    var work = data.work.map(function (work) {
+      return <div key={work.company + work.title}><h3>{work.company}</h3>
+        <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+        <p>{work.description}</p>
+      </div>
+    })
+    var education = data.education.map(function (education) {
+      return <div key={education.school}><h3>{education.school}</h3>
+        <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
+        <p>{education.description}</p></div>
+    })
+    var resumeDownload = data.download;
+  }
 
-    if (this.props.data) {
-      var work = this.props.data.work.map(function (work) {
-        return <div key={work.company + work.title}><h3>{work.company}</h3>
-          <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
-          <p>{work.description}</p>
-        </div>
-      })
-      var education = this.props.data.education.map(function (education) {
-        return <div key={education.school}><h3>{education.school}</h3>
-          <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
-          <p>{education.description}</p></div>
-      })
-      var resumeDownload = this.props.data.download;
-    }
-
-    return (
+  return (
+    <Element name='resume'>
       <section id="resume">
-
         <div className="row work">
           <div className="three columns header-col"></div>
           <div className="nine columns main-col download">
@@ -61,10 +59,7 @@ class Resume extends Component {
             </div>
           </div>
         </div>
-
       </section>
-    );
-  }
+    </Element>
+  );
 }
-
-export default Resume;
