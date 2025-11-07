@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import { Element } from 'react-scroll';
+import { DataContext } from '../../app/dataProvider';
 
-export default function About({ data }: { data: any }) {
-   if (data) {
-      var profilepic = "images/" + data.image;
-      var bio = data.bio;
+export default function About() {
+   const { siteData, loading, error } = useContext(DataContext);
+
+   if (!loading && !error) {
+      var profilepic = "images/" + siteData.main.image;
+      var bio = siteData.main.bio;
    }
 
    return (

@@ -1,14 +1,18 @@
+import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
+import { DataContext } from '../../app/dataProvider';
 
 var classNames = require('classnames');
 
-export default function Header({ data, konami }: { data: any, konami: boolean }) {
-   if (data) {
-      var name = data.name;
-      var occupation = data.occupation;
-      var description = data.description;
-      var city = data.address.city;
-      var networks = data.social.map(function (network) {
+export default function Header({ konami }: { konami: boolean }) {
+   const { siteData, loading, error } = useContext(DataContext);
+
+   if (!loading && !error) {
+      var name = siteData.main.name;
+      var occupation = siteData.main.occupation;
+      var description = siteData.main.description;
+      var city = siteData.main.address.city;
+      var networks = siteData.main.social.map(function (network) {
          return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
       })
    }

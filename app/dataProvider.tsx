@@ -1,6 +1,8 @@
 'use client';
 
-import { createContext, useContext, ReactNode } from 'react';
+import { createContext, ReactNode, useState, useEffect } from 'react';
+
+import raw_data from '../public/data.json';
 
 type Data = {
   main: any,
@@ -10,28 +12,41 @@ type Data = {
 };
 
 type DataContextType = {
-  dataPromise: Promise<Data | null>;
+  siteData: Data | null;
+  loading: boolean;
+  error: boolean;
 };
 
-const DataContext = createContext<DataContextType | null>(null);
+export const DataContext = createContext<DataContextType | null>(null);
 
-export function useData(): DataContextType {
-  let context = useContext(DataContext);
-  if (context === null) {
-    throw new Error('useData must be used within a DataProvider');
-  }
-  return context;
-}
+export function DataProvider({ children }: { children: ReactNode }) {
+  const [siteData, setSiteData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-export function DataProvider({
-  children,
-  dataPromise
-}: {
-  children: ReactNode;
-  dataPromise: Promise<Data | null>;
-}) {
+  useEffect(() => {
+    const fetchSiteData = async () => {
+      try {
+        const siteData = await Promise.resolve(raw_data);
+        setSiteData(siteData);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSiteData();
+  }, []); // run once per mount
+
+  const contextValue = {
+    siteData,
+    loading,
+    error,
+  };
+
   return (
-    <DataContext.Provider value={{ dataPromise }}>
+    <DataContext.Provider value={contextValue}>
       {children}
     </DataContext.Provider>
   );

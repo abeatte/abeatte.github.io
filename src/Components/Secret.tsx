@@ -1,26 +1,23 @@
-import { Element } from 'react-scroll';
+import { useContext } from 'react';
+import { DataContext } from '../../app/dataProvider';
 
-export default function Secret({ data, konami }: { data: any, konami: boolean }) {
-  let img;
-  if (data) {
-    const image = 'images/' + data.image;
-    img = <img alt={data.title} src={image} />;
+export default function Secret() {
+  const { siteData, loading, error } = useContext(DataContext);
+
+  if (!loading && !error) {
+    var profilepic = "images/" + siteData.main.image;
   }
 
   return (
-    <Element name='secret' className={konami ? "" : "hidden"}>
-      <section id="secret">
-        <div className="row secret">
-          <div className="twelve columns collapsed">
-            <h1><span>Top Secret</span></h1>
-
-            <div className="bgrid-thirds s-bgrid-halves cf">
-              {img}
-            </div>
-
-          </div>
+    <section id="secret">
+      <div className="row">
+        <div className="two columns">
+          <img className="profile-pic" src={profilepic} alt="Art Beatte Profile Pic" />
         </div>
-      </section>
-    </Element>
+        <div className="nine columns">
+          <h1>Top Secret</h1>
+        </div>
+      </div>
+    </section>
   );
 }

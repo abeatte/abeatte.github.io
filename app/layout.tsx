@@ -2,8 +2,6 @@ import '../public/css/default.css';
 import '../public/css/layout.css';
 import '../public/css/media-queries.css';
 
-import data from '../public/data.json';
-
 import type { Metadata } from 'next'
 import { DataProvider } from './dataProvider';
 
@@ -13,13 +11,12 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children}) {
-
-    const dataPromise = Promise.resolve(data);
-
     return (
         <html lang="en">
             <body>
-                <DataProvider dataPromise={dataPromise}>{children}</DataProvider>
+                <DataProvider>
+                    {children}
+                </DataProvider>
             </body>
         </html>
     );

@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
+import { DataContext } from '../../app/dataProvider';
 
-export default function Footer({ data }: { data: any }) {
-  if (data) {
-    var networks = data.social.map(function (network) {
+export default function Footer() {
+  const { siteData, loading, error } = useContext(DataContext);
+  
+  if (!loading && !error) {
+    var networks = siteData.main.social.map(function (network) {
       return (
         <li key={network.name}>
           <a href={network.url}>

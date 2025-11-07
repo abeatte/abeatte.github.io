@@ -5,11 +5,9 @@ import Header from './Header';
 import Footer from './Footer';
 import About from './About';
 import Resume from './Resume';
-import Secret from './Secret';
 import Portfolio from './Portfolio';
 
-import { useData } from '../../app/dataProvider';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function App() {
   useEffect(() => {
@@ -19,18 +17,14 @@ export default function App() {
 
   const [konami, setKonami] = useState(false);
 
-  const { dataPromise } = useData()
-  const data = use(dataPromise)
-
   return (
     <div className="App">
       <Konami className="hidden" disabled={false} action={() => setKonami(prev => !prev)} timeout={25} />
-      <Header konami={konami} data={data.main} />
-      <About data={data.main} />
-      <Resume data={data.resume} />
-      <Secret konami={konami} data={data.secret} />
-      <Portfolio data={data.portfolio} />
-      <Footer data={data.main} />
+      <Header konami={konami} />
+      <About />
+      <Resume />
+      <Portfolio />
+      <Footer />
     </div>
   );
 }

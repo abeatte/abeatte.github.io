@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { Element } from 'react-scroll';
+import { DataContext } from '../../app/dataProvider';
 
-export default function Portfolio({ data }: { data: any }) {
-  if (data) {
-    var projects = data.projects.map(function (projects) {
+export default function Portfolio() {
+  const { siteData, loading, error } = useContext(DataContext);
+
+  if (!loading && !error) {
+    var projects = siteData.portfolio.projects.map(function (projects) {
       const projectImage = 'images/portfolio/' + projects.image;
       const link = projects.url != null ? <div className="link-icon"><i className="fa fa-link"></i></div> : null;
 

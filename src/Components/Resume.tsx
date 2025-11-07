@@ -1,19 +1,22 @@
+import { useContext } from 'react';
 import { Element } from 'react-scroll';
+import { DataContext } from '../../app/dataProvider';
 
-export default function Resume({ data }: { data: any }) {
-  if (data) {
-    var work = data.work.map(function (work) {
+export default function Resume() {
+  const { siteData, loading, error } = useContext(DataContext);
+  if (!loading && !error) {
+    var work = siteData.resume.work.map(function (work) {
       return <div key={work.company + work.title}><h3>{work.company}</h3>
         <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
         <p>{work.description}</p>
       </div>
     })
-    var education = data.education.map(function (education) {
+    var education = siteData.resume.education.map(function (education) {
       return <div key={education.school}><h3>{education.school}</h3>
         <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
         <p>{education.description}</p></div>
     })
-    var resumeDownload = data.download;
+    var resumeDownload = siteData.resume.download;
   }
 
   return (
