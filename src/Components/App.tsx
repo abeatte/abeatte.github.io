@@ -1,14 +1,14 @@
 import Konami from 'react-konami-code';
 import ReactGA from 'react-ga';
 
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Secret from './Components/Secret';
-import Portfolio from './Components/Portfolio';
+import Header from './Header';
+import Footer from './Footer';
+import About from './About';
+import Resume from './Resume';
+import Secret from './Secret';
+import Portfolio from './Portfolio';
 
-import { useData } from '../app/dataProvider';
+import { useData } from '../../app/dataProvider';
 import { use, useEffect, useState } from 'react';
 
 export default function App() {
