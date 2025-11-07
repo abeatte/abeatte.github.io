@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "npx serve@latest ./build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "touch build/.nojekyll && gh-pages -d build --dotfiles"
   },
   "dependencies": {
     "classnames": "^2.5.1",
