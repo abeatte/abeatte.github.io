@@ -30,14 +30,14 @@ export default function Header({ data, konami }: { data: any, konami: boolean })
                <Link activeClass="current" smooth={true} duration={500} to="resume">Resume</Link>
             </li>
             <li>
-               <Link className={
+               <Link smooth={true} duration={500} to="portfolio">Projects</Link>
+            </li>
+            <li>
+               <a className={
                   classNames(
                      konami ? "" : "hidden"
                   )
-               } smooth={true} duration={500} to="secret">Top Secret</Link>
-            </li>
-            <li>
-               <Link smooth={true} duration={500} to="portfolio">Projects</Link>
+               } href="/playground">Playground</a>
             </li>
          </ul>
 
