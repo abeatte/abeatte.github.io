@@ -121,6 +121,8 @@ header .scrolldown a {
 }
 header .scrolldown a:hover { color: #11ABB0; }
 
+header a { cursor: pointer; }
+
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -182,6 +184,7 @@ ul#nav li a {
 
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: #F06000; }
+ul#nav li a:hover { color: #11ABB0; }
 
 
 /* ------------------------------------------------------------------ */
@@ -207,7 +210,7 @@ ul#nav li.current a { color: #F06000; }
    line-height: 30px;
    color: #7A7A7A;
 }
-#about .profile-pic {
+.profile-pic {
    position: relative;
    width: 120px;
    height: 120px;
