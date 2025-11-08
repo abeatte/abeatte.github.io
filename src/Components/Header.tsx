@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 var classNames = require('classnames');
 
@@ -12,9 +13,9 @@ export default function Header({ konami }: { konami: boolean }) {
       var occupation = siteData.main.occupation;
       var description = siteData.main.description;
       var city = siteData.main.address.city;
-      var networks = siteData.main.social.map(function (network) {
-         return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-      })
+      var networks = siteData.main.social.map(network =>
+         (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
+      )
    }
 
    const nav = (

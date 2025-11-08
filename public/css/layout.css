@@ -93,7 +93,7 @@ header .social {
 }
 header .social li {
    display: inline-block;
-   margin: 0 15px;
+   margin: 0 10px;
    padding: 0;
 }
 header .social li a { color: #fff; }
@@ -486,7 +486,7 @@ footer .social-links li {
     display: inline-block;
     margin: 0;
     padding: 0;
-    margin-left: 42px;
+    margin-left: 32px;
     color: #F06000;
 }
 

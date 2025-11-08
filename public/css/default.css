@@ -28,7 +28,6 @@ e. Others
 
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
 
 /* ------------------------------------------------------------------
 /* b. Reset
@@ -87,7 +86,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: '&#8220 &#8220'; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {

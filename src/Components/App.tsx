@@ -9,6 +9,10 @@ import Portfolio from './Portfolio';
 
 import { useEffect, useState } from 'react';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab)
+
 export default function App() {
   useEffect(() => {
     ReactGA.initialize('UA-55646580-1');
