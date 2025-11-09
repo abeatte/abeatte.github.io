@@ -14,7 +14,8 @@
     /* header styles
    ------------------------------------------------------------------ */
    header .banner-text h1 {
-      font: 80px/1.1em 'opensans-bold', sans-serif;
+      font: 80px/1.1em var(--font-opensans), sans-serif;
+      font-weight: bold; 
       letter-spacing: -1px;
       margin: 0 auto 12px auto;
    }
@@ -29,11 +30,13 @@
    ------------------------------------------------------------------ */
    header .banner { padding-bottom: 12px; }
    header .banner-text h1 {
-      font: 78px/1.1em 'opensans-bold', sans-serif;
+      font: 78px/1.1em var(--font-opensans), sans-serif;
+      font-weight: bold; 
       letter-spacing: -1px;      
    }
    header .banner-text h3 {
-      font: 17px/1.9em 'librebaskerville-regular', serif;
+      font: 17px/1.9em var(--font-librebaskerville), serif;
+      font-style: normal;
       width: 80%;
    }
    header .banner-text hr {
@@ -42,7 +45,8 @@
    }
    /* nav-wrap */
    #nav-wrap {
-      font: 11px 'opensans-bold', sans-serif;
+      font: 11px var(--font-opensans), sans-serif;
+      font-weight: bold; 
       letter-spacing: 1.5px;
    }
 
@@ -58,7 +62,10 @@
 
    /* Resume Section
    ------------------------------------------------------------------- */
-   #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
+   #resume h1 { 
+      font: 16px/24px var(--font-opensans), sans-serif;
+      font-weight: bold; 
+   }
    #resume .main-col { padding-right: 5%; }   
 }
 
@@ -70,7 +77,8 @@
    /* mobile navigation
    -------------------------------------------------------------------- */
    #nav-wrap {
-      font: 12px 'opensans-bold', sans-serif;
+      font: 12px var(--font-opensans), sans-serif;
+      font-weight: bold; 
       background: transparent !important;
       letter-spacing: 1.5px;  
       width: auto;
@@ -160,9 +168,13 @@
       padding-bottom: 12px;
       padding-top: 6px;
    }
-   header .banner-text h1 { font: 68px/1.1em 'opensans-bold', sans-serif; }
+   header .banner-text h1 { 
+      font: 68px/1.1em var(--font-opensans), sans-serif; 
+      font-weight: bold; 
+   }
    header .banner-text h3 {
-      font: 16px/1.9em 'librebaskerville-regular', serif;
+      font: 16px/1.9em var(--font-librebaskerville), serif;
+      font-style: normal;
       width: 85%;
    }
    header .banner-text hr {
@@ -245,11 +257,14 @@
    -------------------------------------------------------------------- */
    header .banner { padding-top: 24px; }
    header .banner-text h1 {
-      font: 40px/1.1em 'opensans-bold', sans-serif;      
+      font: 40px/1.1em var(--font-opensans), sans-serif;  
+      font-weight: bold; 
+      font-style: normal;   
       margin: 0 auto 24px auto;
    }
    header .banner-text h3 {
-      font: 14px/1.9em 'librebaskerville-regular', sans-serif;
+      font: 14px/1.9em var(--font-librebaskerville), sans-serif;
+      font-style: normal;
       width: 90%;
    }
   

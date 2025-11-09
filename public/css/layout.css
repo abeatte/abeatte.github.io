@@ -60,14 +60,16 @@ header .banner-text {
    padding-top: 35px;
  }
 header .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 90px/1.1em var(--font-opensans), sans-serif;
+   font-weight: bold; 
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 18px/1.9em var(--font-librebaskerville), serif;
+   font-style: normal;
    color: #A8A8A8;
    margin: 0 auto;
    width: 70%;
@@ -134,7 +136,8 @@ header a { cursor: pointer; }
 
 /* nav-wrap */
 #nav-wrap {
-   font: 12px 'opensans-bold', sans-serif;
+   font: 12px var(--font-opensans), sans-serif;
+   font-weight: bold; 
    width: 100%;
    text-transform: uppercase;
    letter-spacing: 2.5px;
@@ -202,7 +205,8 @@ ul#nav li a:hover { color: #11ABB0; }
 #about a:hover, #about a:focus { color: #11ABB0; }
 
 #about h2 {
-   font: 22px/30px 'opensans-bold', sans-serif;
+   font: 22px/30px var(--font-opensans), sans-serif;
+   font-weight: bold; 
    color: #fff;
    margin-bottom: 12px;
 }
@@ -256,7 +260,8 @@ ul#nav li a:hover { color: #11ABB0; }
 #resume a:hover, #resume a:focus { color: #313131; }
 
 #resume h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
+   font: 18px/24px var(--font-opensans), sans-serif;
+   font-weight: bold; 
    text-transform: uppercase;
    letter-spacing: 1px;
 }
@@ -265,7 +270,8 @@ ul#nav li a:hover { color: #11ABB0; }
    padding-bottom: 6px;
 }
 #resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
+   font: 25px/30px var(--font-opensans), sans-serif;
+   font-weight: bold; 
 }
 
 #resume .header-col { padding-top: 9px; }
@@ -277,7 +283,8 @@ ul#nav li a:hover { color: #11ABB0; }
    border-bottom: 1px solid #E8E8E8;
 }
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px var(--font-librebaskerville), serif;
+   font-style: italic;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -287,7 +294,8 @@ ul#nav li a:hover { color: #11ABB0; }
    margin-left: 5px;
 }
 #resume .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
+   font: 15px/24px var(--font-opensans), sans-serif;
+   font-weight: 400; 
    margin-top: 6px;
 }
 
@@ -322,7 +330,8 @@ ul#nav li a:hover { color: #11ABB0; }
 }
 
 #portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
+   font: 15px/24px var(--font-opensans), sans-serif;
+   font-weight: 600; 
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
@@ -397,11 +406,13 @@ ul#nav li a:hover { color: #11ABB0; }
 
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
-   font: 14px/21px 'opensans-bold', sans-serif;
+   font: 14px/21px var(--font-opensans), sans-serif;
+   font-weight: bold; 
    color: #fff;
 }
 .portfolio-item .portfolio-item-meta p {
-   font: 12px/18px 'opensans-light', sans-serif;
+   font: 12px/18px var(--font-opensans), sans-serif;
+   font-weight: 300; 
    color: #c6c7c7;
    margin-bottom: 0;
 }
@@ -431,7 +442,8 @@ ul#nav li a:hover { color: #11ABB0; }
    display: block;
 }
 #twitter li b a {
-   font: 13px/36px 'opensans-regular', Sans-serif;
+   font: 13px/36px var(--font-opensans), Sans-serif;
+   font-weight: 400; 
    color: #474747 !important;
    border: none;
 }
