@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Resume() {
@@ -25,17 +25,11 @@ export default function Resume() {
   return (
     <Element name='resume'>
       <section id="resume">
-        <div className="row work">
-          <div className="three columns header-col"></div>
-          <div className="nine columns main-col download">
-            <div className="row item">
-              <div className="twelve columns"> 
-                <p>
-                  <a href={resumeDownload} className="button"><FontAwesomeIcon size='lg' icon={faDownload}/>Download Resume</a>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="row work download">
+            <a href={resumeDownload} className="button">
+              <FontAwesomeIcon size='lg' icon={faFileLines} />
+              View Resume
+            </a>
         </div>
 
         <div className="row work">
