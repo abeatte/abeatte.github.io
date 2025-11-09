@@ -1,13 +1,17 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Element, Link } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+import Konami from 'react-konami-code';
+
 var classNames = require('classnames');
 
-export default function Header({ konami }: { konami: boolean }) {
+export default function Header() {
    const { siteData, loading, error } = useContext(DataContext);
+
+   const [konami, setKonami] = useState(false);
 
    if (!loading && !error) {
       var name = siteData.main.name;
@@ -21,29 +25,14 @@ export default function Header({ konami }: { konami: boolean }) {
 
    const nav = (
       <nav id="nav-wrap" className="opaque">
-
+         <Konami disabled={false} action={() => setKonami(prev => !prev)} timeout={25} />
          <ul id="nav" className="nav">
-            <li>
-               <Link activeClass="current" smooth={true} duration={500} to="home">Home</Link>
-            </li>
-            <li>
-               <Link activeClass="current" onSetActive={() => console.log('setActive')} smooth={true} duration={500} to="about">About</Link>
-            </li>
-            <li>
-               <Link activeClass="current" smooth={true} duration={500} to="resume">Resume</Link>
-            </li>
-            <li>
-               <Link smooth={true} duration={500} to="portfolio">Projects</Link>
-            </li>
-            <li>
-               <a className={
-                  classNames(
-                     konami ? "" : "hidden"
-                  )
-               } href="/playground">Playground</a>
-            </li>
+            <li><Link activeClass="current" smooth={true} duration={500} to="home">Home</Link></li>
+            <li><Link activeClass="current" smooth={true} duration={500} to="about">About</Link></li>
+            <li><Link activeClass="current" smooth={true} duration={500} to="resume">Resume</Link></li>
+            <li><Link activeClass="current" smooth={true} duration={500} to="portfolio">Projects</Link></li>
+            <li className={classNames(konami ? "" : "hidden")}><a href="/playground">Playground</a></li>
          </ul>
-
       </nav>
    );
 
@@ -65,7 +54,7 @@ export default function Header({ konami }: { konami: boolean }) {
             </div>
 
             <p className="scrolldown">
-               <Link smooth={true} duration={500} to="about"><FontAwesomeIcon size='sm' icon={faCircleChevronDown}/></Link>
+               <Link smooth={true} duration={500} to="about"><FontAwesomeIcon size='sm' icon={faCircleChevronDown} /></Link>
             </p>
          </header>
       </Element>
