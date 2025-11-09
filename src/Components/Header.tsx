@@ -22,9 +22,6 @@ export default function Header({ konami }: { konami: boolean }) {
    const nav = (
       <nav id="nav-wrap" className="opaque">
 
-         <Link className="mobile-btn" smooth={true} duration={500} to="nav-wrap" title="Show navigation">Show navigation</Link>
-         <Link className="mobile-btn" smooth={true} duration={500} to="home" title="Hide navigation">Hide navigation</Link>
-
          <ul id="nav" className="nav">
             <li>
                <Link activeClass="current" smooth={true} duration={500} to="home">Home</Link>
