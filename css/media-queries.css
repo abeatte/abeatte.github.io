@@ -79,7 +79,6 @@
    #nav-wrap {
       font: 12px var(--font-opensans), sans-serif;
       font-weight: bold; 
-      background: transparent !important;
       letter-spacing: 1.5px;  
       width: auto;
       position: fixed;
@@ -120,47 +119,6 @@
 	#nav-wrap:target > a:last-of-type  {
 	   display: block;
 	}
-
-   /* hide menu panel */
-   #nav-wrap ul#nav {
-      height: auto;
-		display: none;
-      clear: both;
-      width: auto; 
-      float: right;     
-
-      position: relative;
-      top: 12px;
-      right: 0;
-   }
-
-   /* display menu panels */
-	#nav-wrap:target > ul#nav	{
-	   display: block;
-      padding: 30px 20px 48px 20px;
-      background: #1f2024;
-      margin: 0 30px;
-      clear: both;
-   }
-
-   ul#nav li {
-      display: block;
-      height: auto;      
-      margin: 0 auto; 
-      padding: 0 4%;           
-      text-align: left;
-      border-bottom: 1px solid #2D2E34;
-      border-bottom-style: dotted; 
-   }
-  
-   ul#nav li a {  
-      display: block;    
-      margin: 0;
-      padding: 0;      
-      margin: 12px 0; 
-      line-height: 16px; /* reset line-height from 48px */
-      border: none;
-   }  
 
    /* Header Styles
    -------------------------------------------------------------------- */

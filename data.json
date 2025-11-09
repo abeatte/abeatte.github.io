@@ -39,7 +39,7 @@
     ]
   },
   "resume":{    
-    "download": "http://artbeatte.com/docs/Art_Beatte_Resume.docx",
+    "download": "./docs/Art_Beatte_Resume_I.pdf",
     "skillmessage":"I build useful things, using cutting edge technology, at scale.",
     "education":[
       {
