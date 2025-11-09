@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   const { siteData, loading, error } = useContext(DataContext);
@@ -29,7 +30,7 @@ export default function Footer() {
           </div>
           <div id="go-top">
             <Link smooth={true} duration={500} title="Back to Top" to="home">
-              <i className="icon-up-open" />
+              <FontAwesomeIcon size='sm' icon={faChevronUp}/>
             </Link>
           </div>
         </div>

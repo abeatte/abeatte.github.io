@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 var classNames = require('classnames');
 
@@ -67,7 +68,7 @@ export default function Header({ konami }: { konami: boolean }) {
             </div>
 
             <p className="scrolldown">
-               <Link smooth={true} duration={500} to="about"><i className="icon-down-circle"></i></Link>
+               <Link smooth={true} duration={500} to="about"><FontAwesomeIcon size='sm' icon={faCircleChevronDown}/></Link>
             </p>
          </header>
       </Element>

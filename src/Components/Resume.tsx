@@ -1,6 +1,9 @@
 import { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Resume() {
   const { siteData, loading, error } = useContext(DataContext);
@@ -26,9 +29,9 @@ export default function Resume() {
           <div className="three columns header-col"></div>
           <div className="nine columns main-col download">
             <div className="row item">
-              <div className="twelve columns">
+              <div className="twelve columns"> 
                 <p>
-                  <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                  <a href={resumeDownload} className="button"><FontAwesomeIcon size='lg' icon={faDownload}/>Download Resume</a>
                 </p>
               </div>
             </div>

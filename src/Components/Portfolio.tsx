@@ -1,6 +1,9 @@
 import { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
+import { DataContext } from '../../app/dataProvider';    
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function Portfolio() {
   const { siteData, loading, error } = useContext(DataContext);
@@ -8,7 +11,7 @@ export default function Portfolio() {
   if (!loading && !error) {
     var projects = siteData.portfolio.projects.map(function (projects) {
       const projectImage = 'images/portfolio/' + projects.image;
-      const link = projects.url != null ? <div className="link-icon"><i className="fa fa-link"></i></div> : null;
+      const link = projects.url != null ? <div className="link-icon"><FontAwesomeIcon size='lg' icon={faLink}/></div> : null;
 
       return <div key={projects.title} className="columns portfolio-item">
         <div className="item-wrap">

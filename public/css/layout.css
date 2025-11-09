@@ -251,7 +251,7 @@ ul#nav li a:hover { color: #11ABB0; }
    /* background: #fff; */
    color: #2B2B2B;
 }
-#resume .download .button i {
+#resume .download .button svg {
    margin-right: 15px;
    font-size: 20px;
 }
