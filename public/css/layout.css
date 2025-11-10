@@ -196,8 +196,7 @@ ul#nav li a:hover { color: #11ABB0; }
 
 #about {
    background: #2B2B2B;
-   padding-top: 96px;
-   padding-bottom: 66px;
+   padding: 45px 0px;
    overflow: hidden;
 }
 
@@ -214,11 +213,17 @@ ul#nav li a:hover { color: #11ABB0; }
    line-height: 30px;
    color: #7A7A7A;
 }
+.about_container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 130px;
+   height: 130px;
    border-radius: 100%;
+   margin-top: -12px;
 }
 #about .main-col { padding-right: 5%; }
 
@@ -228,7 +233,6 @@ ul#nav li a:hover { color: #11ABB0; }
 
 #resume {
    background: #fff;
-   padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
 }
@@ -240,8 +244,6 @@ ul#nav li a:hover { color: #11ABB0; }
 }
 
 #resume .download {
-   width: 75%;
-   padding-top: 6px;
    text-align: center;
 }
 #resume .download .button {
@@ -278,8 +280,7 @@ ul#nav li a:hover { color: #11ABB0; }
 #resume .main-col { padding-right: 10%; }
 
 .education, .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
+   padding-top: 12px;
    border-bottom: 1px solid #E8E8E8;
 }
 #resume .info {
