@@ -1,12 +1,9 @@
-import { useContext } from 'react';
-import { DataContext } from '../../app/dataProvider';
+import { useSiteData } from "../../app/dataProvider";
 
 export default function Secret() {
-  const { siteData, loading, error } = useContext(DataContext);
+  const siteData = useSiteData();
 
-  if (!loading && !error) {
-    var profilepic = "images/" + siteData.main.image;
-  }
+  var profilepic = "images/" + siteData.main.image;
 
   return (
     <section id="secret">
