@@ -16,7 +16,7 @@ export const DataContext = createContext<Promise<Data>>(null);
 export function DataProvider({ children }: { children: ReactNode }) {
 
   const fetchSiteData = async (): Promise<Data> => {
-    return new Promise(resolve => setTimeout(() => resolve(raw_data), 5000));
+    return new Promise(resolve => resolve(raw_data));
   };
 
   const dataPromise = fetchSiteData();
