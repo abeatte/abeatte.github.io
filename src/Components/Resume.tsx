@@ -4,7 +4,6 @@ import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 
-
 export default function Resume() {
   const { siteData, loading, error } = useContext(DataContext);
   if (!loading && !error) {
@@ -22,43 +21,51 @@ export default function Resume() {
     var resumeDownload = siteData.resume.download;
   }
 
+  const downloadResumeView = (
+    <div className="row work download">
+      <a href={resumeDownload} className="button">
+        <FontAwesomeIcon size='lg' icon={faFileLines} />
+        View Resume
+      </a>
+    </div>
+  );
+
+  const workView = (
+    <div className="row work">
+      <div className="three columns header-col">
+        <h1><span>Work</span></h1>
+      </div>
+      <div className="nine columns main-col">
+        <div className="row item">
+          <div className="twelve columns">
+            {work}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const educationView = (
+    <div className="row education">
+      <div className="three columns header-col">
+        <h1><span>Education</span></h1>
+      </div>
+      <div className="nine columns main-col">
+        <div className="row item">
+          <div className="twelve columns">
+            {education}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <Element name='resume'>
       <section id="resume">
-        <div className="row work download">
-            <a href={resumeDownload} className="button">
-              <FontAwesomeIcon size='lg' icon={faFileLines} />
-              View Resume
-            </a>
-        </div>
-
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1><span>Work</span></h1>
-          </div>
-
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                {work}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1><span>Education</span></h1>
-          </div>
-
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                {education}
-              </div>
-            </div>
-          </div>
-        </div>
+        {downloadResumeView}
+        {workView}
+        {educationView}
       </section>
     </Element>
   );
