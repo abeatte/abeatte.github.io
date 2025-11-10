@@ -3,15 +3,18 @@ import { Element, Link } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Loading from './Loading';
 
 export default function Footer() {
   const { siteData, loading, error } = useContext(DataContext);
 
-  if (!loading && !error) {
-    var networks = siteData.main.social.map(network =>
-      (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
-    )
+  if (loading || error) {
+    return <Loading />;
   }
+
+  const networks = siteData.main.social.map(network =>
+    (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
+  );
 
   return (
     <Element name='footer'>

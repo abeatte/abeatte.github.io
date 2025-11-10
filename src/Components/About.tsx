@@ -1,14 +1,17 @@
 import { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { DataContext } from '../../app/dataProvider';
+import Loading from './Loading';
 
 export default function About() {
    const { siteData, loading, error } = useContext(DataContext);
 
-   if (!loading && !error) {
-      var profilepic = "images/" + siteData.main.image;
-      var bio = siteData.main.bio;
+   if (loading || error) {
+      return <Loading />;
    }
+
+   const profilepic = "images/" + siteData.main.image;
+   const bio = siteData.main.bio;
 
    return (
       <Element name='about'>

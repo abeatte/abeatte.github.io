@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import Konami from 'react-konami-code';
+import Loading from './Loading';
 
 var classNames = require('classnames');
 
@@ -13,15 +14,14 @@ export default function Header() {
 
    const [konami, setKonami] = useState(false);
 
-   if (!loading && !error) {
-      var name = siteData.main.name;
-      var occupation = siteData.main.occupation;
-      var description = siteData.main.description;
-      var city = siteData.main.address.city;
-      var networks = siteData.main.social.map(network =>
-         (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
-      )
+   if (loading || error) {
+      return <Loading />;
    }
+
+   const { name, occupation, description, address } = siteData.main;
+   const networks = siteData.main.social.map(network =>
+      (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
+   );
 
    const nav = (
       <nav id="nav-wrap" className="opaque">
@@ -43,7 +43,7 @@ export default function Header() {
             <div className="row banner">
                <div className="banner-text">
                   <h1 className="responsive-headline">{name}</h1>
-                  <h3><span>{occupation} | </span>{city}</h3>
+                  <h3><span>{occupation} | </span>{address.city}</h3>
                   <br></br>
                   <h3> {description}</h3>
                   <hr />
