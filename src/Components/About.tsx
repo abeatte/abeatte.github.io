@@ -1,14 +1,8 @@
-import { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
-import Loading from './Loading';
+import { useSiteData } from '../../app/dataProvider';
 
 export default function About() {
-   const { siteData, loading, error } = useContext(DataContext);
-
-   if (loading || error) {
-      return <Loading />;
-   }
+   const siteData = useSiteData();
 
    const profilepic = "images/" + siteData.main.image;
    const bio = siteData.main.bio;

@@ -1,16 +1,10 @@
-import { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
+import { useSiteData } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
-import Loading from './Loading';
 
 export default function Resume() {
-  const { siteData, loading, error } = useContext(DataContext);
-
-  if (loading || error) {
-    return <Loading />;
-  }
+  const siteData = useSiteData();
 
   const work = siteData.resume.work.map(function (work) {
     return <div key={work.company + work.title}><h3>{work.company}</h3>

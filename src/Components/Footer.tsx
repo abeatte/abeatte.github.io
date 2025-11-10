@@ -1,16 +1,10 @@
-import { useContext } from 'react';
 import { Element, Link } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
+import { useSiteData } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Loading from './Loading';
 
 export default function Footer() {
-  const { siteData, loading, error } = useContext(DataContext);
-
-  if (loading || error) {
-    return <Loading />;
-  }
+  const siteData = useSiteData();
 
   const networks = siteData.main.social.map(network =>
     (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)

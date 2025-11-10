@@ -1,16 +1,10 @@
-import { useContext } from 'react';
 import { Element } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
+import { useSiteData } from '../../app/dataProvider';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Loading from './Loading';
 
 export default function Portfolio() {
-  const { siteData, loading, error } = useContext(DataContext);
-
-  if (loading || error) {
-    return <Loading />;
-  }
+  const siteData = useSiteData();
 
   const projects = siteData.portfolio.projects.map(function (projects) {
     const projectImage = 'images/portfolio/' + projects.image;

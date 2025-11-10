@@ -6,10 +6,11 @@ import About from './About';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
 
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import Loading from './Loading';
 library.add(fab)
 
 export default function App() {
@@ -20,11 +21,13 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header />
-      <About />
-      <Resume />
-      <Portfolio />
-      <Footer />
+      <Suspense fallback={<Loading />} >
+        <Header />
+        <About />
+        <Resume />
+        <Portfolio />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

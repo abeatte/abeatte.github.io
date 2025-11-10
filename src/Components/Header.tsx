@@ -1,22 +1,16 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Element, Link } from 'react-scroll';
-import { DataContext } from '../../app/dataProvider';
+import { useSiteData } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import Konami from 'react-konami-code';
-import Loading from './Loading';
 
 var classNames = require('classnames');
 
 export default function Header() {
-   const { siteData, loading, error } = useContext(DataContext);
-
+   const siteData = useSiteData();
    const [konami, setKonami] = useState(false);
-
-   if (loading || error) {
-      return <Loading />;
-   }
 
    const { name, occupation, description, address } = siteData.main;
    const networks = siteData.main.social.map(network =>

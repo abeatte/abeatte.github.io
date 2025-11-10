@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useState, useEffect } from 'react';
+import { createContext, ReactNode, use } from 'react';
 
 import raw_data from '../public/data.json';
 
@@ -11,43 +11,23 @@ type Data = {
   portfolio: any
 };
 
-type DataContextType = {
-  siteData: Data | null;
-  loading: boolean;
-  error: boolean;
-};
-
-export const DataContext = createContext<DataContextType | null>(null);
+export const DataContext = createContext<Promise<Data>>(null);
 
 export function DataProvider({ children }: { children: ReactNode }) {
-  const [siteData, setSiteData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchSiteData = async () => {
-      try {
-        const siteData = await Promise.resolve(raw_data);
-        setSiteData(siteData);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchSiteData();
-  }, []); // run once per mount
-
-  const contextValue = {
-    siteData,
-    loading,
-    error,
+  const fetchSiteData = async (): Promise<Data> => {
+    return new Promise(resolve => setTimeout(() => resolve(raw_data), 5000));
   };
 
+  const dataPromise = fetchSiteData();
+
   return (
-    <DataContext.Provider value={contextValue}>
+    <DataContext.Provider value={dataPromise}>
       {children}
     </DataContext.Provider>
   );
 }
+
+export const useSiteData = (): Data => {
+  return use(use(DataContext));
+};
