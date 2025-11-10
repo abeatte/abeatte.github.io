@@ -11,6 +11,7 @@ import { Suspense, useEffect } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import Loading from './Loading';
+import Intro from './Intro';
 library.add(fab)
 
 export default function App() {
@@ -21,8 +22,9 @@ export default function App() {
 
   return (
     <div className="App">
+      <Header />
       <Suspense fallback={<Loading />} >
-        <Header />
+        <Intro />
         <About />
         <Resume />
         <Portfolio />
