@@ -32,7 +32,7 @@ export default function Portfolio() {
         <div className="row">
           <div className="twelve columns collapsed">
             <h1>My Side Projects</h1>
-            <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-halves cf">
+            <div id="portfolio-wrapper" className="bgrid-halves s-bgrid-halves cf">
               {projects}
             </div>
           </div>
