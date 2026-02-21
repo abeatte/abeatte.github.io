@@ -31,7 +31,7 @@ export default function Portfolio() {
       <section id="portfolio">
         <div className="row">
           <div className="twelve columns collapsed">
-            <h1>My Side Projects</h1>
+            <h1>My Workbench</h1>
             <div id="portfolio-wrapper" className="bgrid-halves s-bgrid-halves cf">
               {projects}
             </div>

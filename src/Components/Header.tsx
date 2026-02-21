@@ -14,7 +14,7 @@ export default function Header() {
             <li><Link activeClass="current" smooth={true} duration={500} to="home">Home</Link></li>
             <li><Link activeClass="current" smooth={true} duration={500} to="about">About</Link></li>
             <li><Link activeClass="current" smooth={true} duration={500} to="resume">Resume</Link></li>
-            <li><Link activeClass="current" smooth={true} duration={500} to="portfolio">Projects</Link></li>
+            <li><Link activeClass="current" smooth={true} duration={500} to="portfolio">Workbench</Link></li>
             <li className={classNames(konami ? "" : "hidden")}><a href="/playground">Playground</a></li>
          </ul>
       </nav>
