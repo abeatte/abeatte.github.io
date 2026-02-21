@@ -107,6 +107,12 @@
         "url":"https://abeatte.github.io/garbage"
       },
       {
+        "title":"Pokédex",
+        "category":"GraphQL API Sample App",
+        "image":"graphql-pokemon.png",
+        "url":"https://abeatte.github.io/pokedex"
+      },
+      {
         "title":"Islands (Godot) Game",
         "category":"Godot top down pixel game",
         "image":"islands-game.png",
