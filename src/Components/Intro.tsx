@@ -4,8 +4,6 @@ import { useSiteData } from '../../app/dataProvider';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-var classNames = require('classnames');
-
 export default function Intro() {
     const siteData = useSiteData();
 
