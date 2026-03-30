@@ -1,0 +1,64 @@
+{
+  "main": {
+    "name": "Test User",
+    "occupation": "Software Engineer",
+    "description": "A test description.",
+    "image": "headshot.png",
+    "bio": "Test bio content.",
+    "address": {
+      "city": "Seattle",
+      "state": "WA"
+    },
+    "website": "http://www.test.com",
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/testuser",
+        "className": "fab fa-github"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://linkedin.com/in/testuser",
+        "className": "fab fa-linkedin"
+      }
+    ]
+  },
+  "resume": {
+    "download": "./docs/test_resume.pdf",
+    "education": [
+      {
+        "school": "Test University",
+        "degree": "B.S. in Computer Science",
+        "graduated": "June 2020",
+        "description": "Test education description."
+      }
+    ],
+    "work": [
+      {
+        "company": "Test Corp",
+        "title": "Engineer",
+        "years": "2020 - Present",
+        "description": "Test work description."
+      }
+    ]
+  },
+  "secret": {
+    "title": "Under Construction",
+    "image": "under-construction.png"
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Test Project",
+        "category": "Test Category",
+        "image": "test.png",
+        "url": "https://test.com"
+      },
+      {
+        "title": "No Link Project",
+        "category": "Another Category",
+        "image": "nolink.png"
+      }
+    ]
+  }
+}
