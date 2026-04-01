@@ -1,22 +1,16 @@
 import { Element, Link } from 'react-scroll';
-import { useSiteData } from '../../app/dataProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import SocialLinks from './SocialLinks';
 
 export default function Footer() {
-  const siteData = useSiteData();
-
-  const networks = siteData.main.social.map(network =>
-    (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
-  );
-
   return (
     <Element name='footer'>
       <footer>
         <div className="row">
           <div className="twelve columns">
             <ul className="social-links">
-              {networks}
+              <SocialLinks />
             </ul>
             <ul className="copyright">
               <li>&copy; Copyright 2020 Art Beatte IV</li>

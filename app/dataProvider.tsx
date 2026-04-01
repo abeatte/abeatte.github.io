@@ -13,14 +13,9 @@ type Data = {
 
 export const DataContext = createContext<Promise<Data>>(null);
 
+const dataPromise = Promise.resolve(raw_data as Data);
+
 export function DataProvider({ children }: { children: ReactNode }) {
-
-  const fetchSiteData = async (): Promise<Data> => {
-    return new Promise(resolve => resolve(raw_data));
-  };
-
-  const dataPromise = fetchSiteData();
-
   return (
     <DataContext.Provider value={dataPromise}>
       {children}

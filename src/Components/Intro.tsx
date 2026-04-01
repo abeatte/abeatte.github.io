@@ -1,16 +1,12 @@
-
 import { Element, Link } from 'react-scroll';
 import { useSiteData } from '../../app/dataProvider';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SocialLinks from './SocialLinks';
 
 export default function Intro() {
-    const siteData = useSiteData();
-
-    const { name, occupation, description, address } = siteData.main;
-    const networks = siteData.main.social.map(network =>
-        (<li key={network.name}><a href={network.url}><span><FontAwesomeIcon icon={network.className} /></span></a></li>)
-    );
+    const { main } = useSiteData();
+    const { name, occupation, description, address } = main;
 
     return (
         <Element name='home'>
@@ -23,7 +19,7 @@ export default function Intro() {
                         <h3> {description}</h3>
                         <hr />
                         <ul className="social">
-                            {networks}
+                            <SocialLinks />
                         </ul>
                     </div>
                 </div>
