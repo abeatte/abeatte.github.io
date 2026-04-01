@@ -8,7 +8,7 @@ export default function SocialLinks() {
     <>
       {main.social.map(network => (
         <li key={network.name}>
-          <a href={network.url}>
+          <a href={network.url} target="_blank" rel="noopener noreferrer">
             <span><FontAwesomeIcon icon={network.className} /></span>
           </a>
         </li>
