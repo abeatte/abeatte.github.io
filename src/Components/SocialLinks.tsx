@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSiteData } from '../../app/dataProvider';
 
-export default function SocialLinks({ links = undefined }: { links: undefined | [string] }) {
+export default function SocialLinks({ links = undefined }: { links?: undefined | string[] }) {
   const { main } = useSiteData();
 
   const uiLinks = links === undefined ? main.social : main.social.filter(n => links.includes(n.name));

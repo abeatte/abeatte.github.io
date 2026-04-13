@@ -23,34 +23,34 @@ type Data = {
       state: string,
     },
     website: string,
-    social: [SocialData],
+    social: SocialData[],
   },
   resume: {
-    doanload: string,
-    education: [{
+    download: string,
+    education: {
       school: string,
       degree: string,
       graduated: string,
       description: string,
-    }],
-    work: [{
+    }[],
+    work: {
       company: string,
       title: string,
       years: string,
-      description,
-    }],
+      description: string,
+    }[],
   },
   secret: {
     title: string,
     image: string,
   },
   portfolio: {
-    projects: [{
+    projects: {
       title: string,
       category: string,
       image: string,
       url: string,
-    }]
+    }[]
   }
 };
 
