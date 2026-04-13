@@ -14,12 +14,12 @@ export default function Intro() {
                 <div className="row banner">
                     <div className="banner-text">
                         <h1 className="responsive-headline">{name}</h1>
-                        <h3><span>{occupation} | </span>{address.city}</h3>
+                        <h3><span>{occupation}  |  </span>{address.city}, {address.state}</h3>
                         <br></br>
                         <h3> {description}</h3>
                         <hr />
                         <ul className="social">
-                            <SocialLinks />
+                            <SocialLinks links={['facebook', 'linkedin', 'github']} />
                         </ul>
                     </div>
                 </div>
