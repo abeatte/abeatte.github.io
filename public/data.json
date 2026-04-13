@@ -1,10 +1,10 @@
 {
   "main": {
     "name":"Art Beatte IV",
-    "occupation":"Sr. Software Engineer",
-    "description":"A product focused software engineer with a bias for action and over 10 years of industry experience. I thrive on reducing ambiguity to turn product ideas into real world solutions.",
+    "occupation":"Senior Software Engineer",
+    "description":"Product-focused Senior Software Engineer with 12+ years of industry experience across mobile, web, and cloud platforms. Proven ability to cut through ambiguity and translate product ideas into reliable, scalable software.",
     "image":"headshot.png",
-    "bio":"I was born and raised just North of Seattle. Building things is my passion. When I am not software engineering I create wood artwork, lift weights, invest and generally try to learn something new every day.",
+    "bio":"I was born and raised just North of Seattle. Building things and solving problems is my passion. When I am not in front of a computer I can be found creating wooden artwork and furniture, lifting heavy weights, investing in my personal stock portfolio or nose in a book trying to learn something new.",
     "address":{
       "city":"Bothell",
       "state":"WA"
@@ -32,18 +32,18 @@
         "className":"fab fa-github"
       },
       {
-        "name":"Stack Overflow",
+        "name":"stackoverflow",
         "url":"https://stackoverflow.com/users/1454347/astryk",
         "className":"fab fa-stack-overflow"
       }
     ]
   },
   "resume":{    
-    "download": "./docs/Art_Beatte_Resume_I.pdf",
+    "download": "./docs/Art_Beatte_Resume.pdf",
     "education":[
       {
         "school":"University of Washington",
-        "degree":"Graduate Certificate in Software Design & Development",
+        "degree":"Graduate Certificate in Software Development & Design",
         "graduated":"June 2013",
         "description":"Data structures; SDLC, Software modeling, Systems programming, Testing and QA."
       },
@@ -55,35 +55,29 @@
       },
       {
         "school":"Washington State University",
-        "degree":"B.A. in Sociology with Minor in Psychology",
+        "degree":"B.S. in Sociology & Psychology",
         "graduated":"December 2009",
         "description":"Statistics; Demography; Personality; Deviance; Criminal Justice; Social Grouping."
       }
     ],
     "work":[
       {
-        "company":"Amazon Web Services - Kuiper",
-        "title":"Sr. Software Engineer",
+        "company":"Amazon Web Services — Project Kuiper",
+        "title":"Senior Software Engineer",
         "years":"October 2024 - Present",
-        "description":"I lead a team of 20 working on the administration console for the Kuiper satalites."
+        "description":"Tech lead for the Kuiper administration and configuration console, overseeing a team of 20+ engineers across multiple feature areas. Architected core system components during a major backend migration and drove the shift from manual release testing to automated test pipelines. Partnered with Product and Business stakeholders to influence customer-facing features and quarterly roadmap priorities."
       },
       {
         "company":"Facebook / Meta",
-        "title":"Sr. Software Engineer",
-        "years":"May 2016 - June 2024",
-        "description":"I've been on a handful of different teams ranging from Facebook Login to Marketplace, to Messenger. I am currently the Tech Lead on the Ads Manager Desktop."
-      },
-      {
-        "company":"Facebook / Meta",
-        "title":"Software Engineering Manager",
-        "years":"September 2021 - February 2023",
-        "description":"I support a team of 7 engineers working on Messenger Desktop"
+        "title":"Senior Software Engineer | Engineering Manager",
+        "years":"May 2016 - July 2024",
+        "description":"I've been on a handful of different teams ranging from Facebook Login, to Marketplace, to Messenger, to Ads Manager Desktop. I have acted as both a Sr. Engineer / Tech Lead and as an Engineering Manager"
       },
       {
         "company":"DocuSign",
-        "title":"Sorfware Engineer",
+        "title":"Software Engineer | Android Software Engineer",
         "years":"December 2012 - May 2016",
-        "description":"Joined on as part of the Android mobile team. Eventually lead the Android and Mobile teams. Moved on to a Web Admin Console team and began work on APIs."
+        "description":"Lead Android developer for the DocuSign app (500,000+ installs). Delivered key features for the Administration Console and Preferences page on the web. Architected a cross-platform localization framework adopted across client apps. Drove backend performance improvements and collaborated with the API team to build shared endpoints."
       }
     ]
   },

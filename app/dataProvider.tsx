@@ -3,12 +3,55 @@
 import { createContext, ReactNode, use } from 'react';
 
 import raw_data from '../public/data.json';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+type SocialData = {
+  name: string,
+  url: string,
+  className: IconProp,
+};
 
 type Data = {
-  main: any,
-  resume: any,
-  secret: any,
-  portfolio: any
+  main: {
+    name: string,
+    occupation: string,
+    description: string,
+    image: string,
+    bio: string,
+    address: {
+      city: string,
+      state: string,
+    },
+    website: string,
+    social: [SocialData],
+  },
+  resume: {
+    doanload: string,
+    education: [{
+      school: string,
+      degree: string,
+      graduated: string,
+      description: string,
+    }],
+    work: [{
+      company: string,
+      title: string,
+      years: string,
+      description,
+    }],
+  },
+  secret: {
+    title: string,
+    image: string,
+  },
+  portfolio: {
+    projects: [{
+      title: string,
+      category: string,
+      image: string,
+      url: string,
+    }]
+  }
 };
 
 export const DataContext = createContext<Promise<Data>>(null);
