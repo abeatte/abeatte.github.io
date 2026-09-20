@@ -62,21 +62,31 @@
     ],
     "work":[
       {
+        "company":"General Motors",
+        "title":"Staff Software Engineer",
+        "years":"August 2026 - Present",
+        "logo":"images/logo-gm.svg",
+        "description":"Staff engineer on a lean Engineering Effectiveness team focused on improving developer velocity and reducing friction across multiple teams and organizations. Identifying and eliminating bottlenecks in build, test, and deployment pipelines to enable engineers to ship faster with greater confidence."
+      },
+      {
         "company":"Amazon Web Services — Project Kuiper",
         "title":"Senior Software Engineer",
-        "years":"October 2024 - Present",
-        "description":"Tech lead for the Kuiper administration and configuration console, overseeing a team of 20+ engineers across multiple feature areas. Architected core system components during a major backend migration and drove the shift from manual release testing to automated test pipelines. Partnered with Product and Business stakeholders to influence customer-facing features and quarterly roadmap priorities."
+        "years":"October 2024 - July 2026",
+        "logo":"images/logo-aws.svg",
+        "description":"Tech lead for the Kuiper administration and configuration console, overseeing a team of 20+ engineers across multiple feature areas. Architected core system components during a major backend migration and drove the shift from manual release testing to automated test pipelines. Partnered with Product and Business stakeholders to shape customer-facing features and quarterly roadmap priorities."
       },
       {
         "company":"Facebook / Meta",
         "title":"Senior Software Engineer | Engineering Manager",
         "years":"May 2016 - July 2024",
-        "description":"I've been on a handful of different teams ranging from Facebook Login, to Marketplace, to Messenger, to Ads Manager Desktop. I have acted as both a Sr. Engineer / Tech Lead and as an Engineering Manager"
+        "logo":"images/logo-meta.svg",
+        "description":"I spent eight years across a range of high-impact teams including Facebook Login, Marketplace, Messenger, and Ads Manager Desktop. Operated as both a Senior Engineer and Tech Lead driving technical direction, and as an Engineering Manager leading cross-functional teams through planning, execution, and delivery."
       },
       {
         "company":"DocuSign",
         "title":"Software Engineer | Android Software Engineer",
         "years":"December 2012 - May 2016",
+        "logo":"images/logo-docusign.svg",
         "description":"Lead Android developer for the DocuSign app (500,000+ installs). Delivered key features for the Administration Console and Preferences page on the web. Architected a cross-platform localization framework adopted across client apps. Drove backend performance improvements and collaborated with the API team to build shared endpoints."
       }
     ]
@@ -92,6 +102,12 @@
         "category":"Fitness and Weight Tracking Android app",
         "image":"ss-logo.png",
         "url":"https://play.google.com/store/apps/details?id=com.art.smartScale"
+      },
+      {
+        "title":"Soccer Juggle Tracker",
+        "category":"Home Assistant / Frigate integration using CV to count soccer juggles and display stats",
+        "image":"soccer-juggle.jpg",
+        "url":"https://github.com/abeatte/soccer-juggle-tracker"
       },
       {
         "title":"Garbage Game",
