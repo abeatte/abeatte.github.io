@@ -104,6 +104,12 @@
         "url":"https://play.google.com/store/apps/details?id=com.art.smartScale"
       },
       {
+        "title":"Soccer Juggle Tracker",
+        "category":"Home Assistant / Frigate integration using CV to count soccer juggles and display stats",
+        "image":"soccer-juggle.jpg",
+        "url":"https://github.com/abeatte/soccer-juggle-tracker"
+      },
+      {
         "title":"Garbage Game",
         "category":"Basic pixel game",
         "image":"garbage.png",
