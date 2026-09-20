@@ -38,6 +38,7 @@ type Data = {
       title: string,
       years: string,
       description: string,
+      logo?: string,
     }[],
   },
   secret: {

@@ -276,6 +276,21 @@ ul#nav li a:hover { color: #11ABB0; }
    font-weight: bold; 
 }
 
+#resume .work-company {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   margin-bottom: 0;
+}
+
+#resume .company-logo {
+   height: 48px;
+   width: auto;
+   max-width: 200px;
+   object-fit: contain;
+   flex-shrink: 0;
+}
+
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 

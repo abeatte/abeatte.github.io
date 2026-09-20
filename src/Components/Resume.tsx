@@ -36,7 +36,15 @@ export default function Resume() {
         <ResumeSection title="Work">
           {resume.work.map(job => (
             <div key={job.company + job.title}>
-              <h3>{job.company}</h3>
+              <div className="work-company">
+                {job.logo && (
+                  <img
+                    src={job.logo}
+                    alt={`${job.company} logo`}
+                    className="company-logo"
+                  />
+                )}
+              </div>
               <p className="info">{job.title}<span>&bull;</span> <em className="date">{job.years}</em></p>
               <p>{job.description}</p>
             </div>
